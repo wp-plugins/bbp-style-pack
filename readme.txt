@@ -40,5 +40,5 @@ To install this plugin :
 
 == Changelog ==
 
-
+1.1 First live version
 1.0 Version 1
