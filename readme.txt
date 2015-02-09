@@ -4,7 +4,7 @@ Tags: forum, bbpress, bbp, style
 Requires at least: 3.0.1
 Donate link: http://www.rewweb.co.uk/donate
 Tested up to: 4.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,5 +40,5 @@ To install this plugin :
 
 == Changelog ==
 
-
+1.2 Several errors in 1.1 fixed
 1.0 Version 1
