@@ -558,7 +558,10 @@ $field2=$dataf['Forum BorderLine style'] ;
 $field3=$dataf['Forum BorderColor'] ;
 
 if (!empty ($field1) || !empty ($field2) ||!empty ($field3)) {
-$field=$field1.' '.$field2.' '.$field3
+	if (empty ($field1)) $field1 = '1px' ;
+	if (is_numeric($field1)) $field1=$field1.'px' ;
+	if (empty ($field2)) $field2 = 'solid' ;
+	$field=$field1.' '.$field2.' '.$field3
 ?>
 
 #bbpress-forums ul.bbp-forums,
@@ -823,14 +826,14 @@ Font-weight:  normal ;
 ?>
 
 
-/*----------------------  Font - voice count --------------------------*/
+/*----------------------  Font - voice/post count --------------------------*/
  
 <?php 
-$field=$datati['Voice Count FontSize'] ;
+$field=$datati['Voice/Post Count FontSize'] ;
 if (!empty ($field)) {
 if (is_numeric($field)) $field=$field.'px' ;
 ?>
-#bbpress-forums li.bbp-topic-voice-count
+#bbpress-forums li.bbp-topic-voice-count, li.bbp-topic-reply-count
  
  {
 font-size:  <?php echo $field ; ?> ;
@@ -838,10 +841,10 @@ font-size:  <?php echo $field ; ?> ;
  <?php } ?>
  
 <?php 
-$field=$datati['Voice Count FontColor'] ;
+$field=$datati['Voice/Post Count FontColor'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums li.bbp-topic-voice-count
+#bbpress-forums li.bbp-topic-voice-count, li.bbp-topic-reply-count
  
  {
 color:  <?php echo $field ; ?> ;
@@ -849,10 +852,10 @@ color:  <?php echo $field ; ?> ;
  <?php } ?>
  
  <?php 
-$field=$datati['Voice Count FontFont'] ;
+$field=$datati['Voice/Post Count FontFont'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums li.bbp-topic-voice-count
+#bbpress-forums li.bbp-topic-voice-count, li.bbp-topic-reply-count
  
  {
 Font-Family:  <?php echo $field ; ?> ;
@@ -860,12 +863,12 @@ Font-Family:  <?php echo $field ; ?> ;
  <?php } ?>
  
 <?php 
-$field=$datati['Voice Count FontStyle'] ;
+$field=$datati['Voice/Post Count FontStyle'] ;
 
 if (!empty ($field)) {
 if (strpos($field,'Italic') !== false) {
 ?>
-#bbpress-forums li.bbp-topic-voice-count
+#bbpress-forums li.bbp-topic-voice-count, li.bbp-topic-reply-count
  
  {
 Font-Style:  italic ; 
@@ -874,14 +877,14 @@ Font-Style:  italic ;
 
 if (strpos($field,'Bold') !== false) {
 ?>
-#bbpress-forums li.bbp-topic-voice-count
+#bbpress-forums li.bbp-topic-voice-count, li.bbp-topic-reply-count
  
  {
 Font-weight:  bold ; 
  }
  <?php }
  else { ?>
- #bbpress-forums li.bbp-topic-voice-count
+ #bbpress-forums li.bbp-topic-voice-count, li.bbp-topic-reply-count
  
  {
 Font-weight:  normal ; 
@@ -1081,37 +1084,98 @@ background-color:  <?php echo $field ; ?> ;
 /*----------------------  Font - template border --------------------------*/
  
 <?php 
-$field=$datati['Template Notice BorderLine width'] ;
-if (!empty ($field)) {
+
+$field1=$datati['Template Notice BorderLine width'] ;
+$field2=$datati['Template Notice BorderLine style'] ; ;
+$field3=$datati['Template Notice BorderLine color'] ;
+
+if (!empty ($field1) || !empty ($field2) ||!empty ($field3)) {
+	if (empty ($field1)) $field1 = '1px' ;
+	if (is_numeric($field1)) $field1=$field1.'px' ;
+	//if (empty ($field2)) $field2 = 'solid' ;
+	$field=$field1.' '.$field2.' '.$field3
 ?>
 #bbpress-forums .bbp-template-notice
  
  {
-border-width:  <?php echo $field ; ?> ;
+Border:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+ 
+ /*----------------------  Font - Started by --------------------------*/
+ 
+<?php 
+$field=$datati['Topic Started bySize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+#bbpress-forums .bbp-topic-started-by
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
  }
  <?php } ?>
  
 <?php 
-$field=$datati['Template Notice BorderLine Style '] ;
+$field=$datati['Topic Started byColor'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums .bbp-template-notice
+#bbpress-forums .bbp-topic-started-by
  
  {
-border-style:  <?php echo $field ; ?> ;
+color:  <?php echo $field ; ?> ;
  }
  <?php } ?>
  
  <?php 
-$field=$datati['Template Notice BorderLine Color'] ;
+$field=$datati['Topic Started byFont'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums .bbp-template-notice
+#bbpress-forums .bbp-topic-started-by
  
  {
-border-color:  <?php echo $field ; ?> ;
+Font-Family::  <?php echo $field ; ?> ;
  }
  <?php } ?>
+ 
+<?php 
+$field=$datati['Topic Started byStyle'] ;
+
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+#bbpress-forums .bbp-topic-started-by
+ 
+ {
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+#bbpress-forums .bbp-topic-started-by
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+ else { ?>
+ #bbpress-forums .bbp-topic-started-by
+ 
+ {
+Font-weight:  normal ; 
+ }
+ 
+ 
+ <?php
+}
+ 
+}
+
+?>
+
  
 
 
@@ -1460,6 +1524,85 @@ Font-weight:  normal ;
  }
  }
  ?>
+ 
+  /*----------------------  Font - author role --------------------------*/
+ 
+<?php 
+$field=$datat['Author RoleSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+#bbpress-forums div.bbp-reply-author .bbp-author-role
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ <?php 
+$field=$datat['Author RoleColor'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums div.bbp-reply-author.bbp-author-role
+
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+ 
+ <?php 
+$field=$datat['Author RoleFont'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums div.bbp-reply-author .bbp-author-role
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datat['Author RoleStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+#bbpress-forums div.bbp-reply-author .bbp-author-role
+ 
+ {
+Font-Style:  italic ; 
+ }
+<?php }
+else {?>
+ #bbpress-forums div.bbp-reply-author .bbp-author-role
+ 
+ {
+Font-Style:  normal ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+#bbpress-forums div.bbp-reply-author .bbp-author-role
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+ else {?>
+ #bbpress-forums div.bbp-reply-author .bbp-author-role
+ 
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+ 
  
  
  /*********_________________FORUM DISPLAY___________________________________________*/ 

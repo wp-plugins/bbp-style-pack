@@ -44,7 +44,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default #fbfbfb', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default #fbfbfb Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -52,7 +52,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area2 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area2] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default #fff', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default #fff Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 	
@@ -67,7 +67,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default #f4f4f4', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default #f4f4f4 Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 	
@@ -88,7 +88,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 12px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 12px - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -96,7 +96,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area2 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area2] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter color', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -104,7 +104,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Font eg Arial', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter Font eg Arial - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -140,7 +140,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 12px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 12px - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -148,7 +148,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area2 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area2] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter color', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -156,7 +156,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Font eg Arial', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter Font eg Arial - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -189,7 +189,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter color', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -197,7 +197,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area2 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area2] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter color', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -205,7 +205,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter color', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			
@@ -225,7 +225,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 12px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 12px - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -233,7 +233,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Font eg Arial', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter Font eg Arial - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -266,7 +266,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 12px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 12px - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -274,7 +274,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Font eg Arial', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter Font eg Arial - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -308,7 +308,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 12px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 12px - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -316,7 +316,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area2 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area2] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter color', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -324,7 +324,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Font eg Arial', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter Font eg Arial - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -355,7 +355,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 12px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 12px - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -363,7 +363,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Font eg Arial', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter Font eg Arial - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -395,7 +395,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 12px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 12px - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -403,7 +403,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Font eg Arial', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter Font eg Arial - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -435,7 +435,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 1px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 1px ', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -443,7 +443,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default solid', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default solid - solid, dashed, dotted are common values - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -451,7 +451,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area4 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item4.'" class="large-text" name="'.$item4.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area4] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Color', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 	<!--Font - topic count  ------------------------------------------------------------------->
@@ -471,7 +471,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 12px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 12px - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -479,7 +479,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area2 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area2] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter color', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -487,7 +487,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Font eg Arial', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter Font eg Arial - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -520,7 +520,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 12px', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 12px - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -528,7 +528,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area2 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area2] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter color', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
@@ -536,7 +536,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area3 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area3] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter Font eg Arial', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Enter Font eg Arial - see help for further info', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
