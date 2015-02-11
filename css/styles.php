@@ -3,7 +3,9 @@
 $dataf= get_option('bsp_style_settings_f') ;
 $datati= get_option('bsp_style_settings_ti') ;
 $datat= get_option('bsp_style_settings_t') ;
+$dataform= get_option('bsp_style_settings_form') ;
 $datafd=get_option('bsp_forum_display') ;
+
 ?>
 
 
@@ -1543,7 +1545,7 @@ font-size:  <?php echo $field ; ?> ;
 $field=$datat['Author RoleColor'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums div.bbp-reply-author.bbp-author-role
+#bbpress-forums div.bbp-reply-author .bbp-author-role
 
  
  {
@@ -1603,6 +1605,178 @@ Font-weight:  normal ;
  ?>
  
  
+ /*********_________________TOPIC REPLY FORM___________________________________________*/ 
+ 
+  /*----------------------  Topic/reply Labels --------------------------*/
+ 
+<?php 
+$field=$dataform['LabelsSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+#bbpress-forums .bbp-form label
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ <?php 
+$field=$dataform['LabelsColor'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums .bbp-form label
+
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+ 
+ <?php 
+$field=$dataform['LabelsFont'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums .bbp-form label
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$dataform['LabelsStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+#bbpress-forums .bbp-form label
+ {
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+#bbpress-forums .bbp-form label
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+else {?>
+#bbpress-forums .bbp-form label
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+ /*----------------------  Text area background --------------------------*/
+ 
+ 
+ <?php 
+$field=$dataform['Text areaBackground Color'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums input[type="text"], textarea, 
+#bbpress-forums .quicktags-toolbar
+ 
+ {
+background-color:  <?php echo $field ; ?> ;
+ }
+ 
+ <?php } ?>
+ 
+ /*----------------------  Text area font --------------------------*/
+ 
+<?php 
+$field=$dataform['Text areaSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+#bbpress-forums input[type="text"], textarea, 
+#bbpress-forums .quicktags-toolbar ,
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ <?php 
+$field=$dataform['Text areaColor'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums input[type="text"], textarea, 
+#bbpress-forums .quicktags-toolbar ,
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content
+
+
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+ 
+ <?php 
+$field=$dataform['Text areaFont'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums input[type="text"], textarea, 
+#bbpress-forums .quicktags-toolbar ,
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$dataform['Text areaStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+#bbpress-forums input[type="text"], textarea, 
+#bbpress-forums .quicktags-toolbar ,
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content
+ {
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+#bbpress-forums input[type="text"], textarea, 
+#bbpress-forums .quicktags-toolbar ,
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+else {?>
+#bbpress-forums input[type="text"], textarea, 
+#bbpress-forums .quicktags-toolbar ,
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+ 
+
+ 
+ 
+ 
  
  
  /*********_________________FORUM DISPLAY___________________________________________*/ 
@@ -1644,7 +1818,9 @@ border-bottom-left-radius: 10px ;
 border-bottom-right-radius: 10px ;
 	}
 	
-	
+#bbpress-forums .bbp-topic-freshness-author {
+	color : blue ;
+}
 	
 	
 <?php
@@ -1654,6 +1830,8 @@ border-bottom-right-radius: 10px ;
 	
 
 ?>
+
+
 
  
  

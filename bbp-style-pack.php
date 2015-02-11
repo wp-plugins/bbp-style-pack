@@ -4,7 +4,7 @@
 Plugin Name: bbp style pack
 Plugin URI: http://www.rewweb.co.uk/bbp-styling-pack
 Description: This plugin adds styling and features to bbPress
-Version: 1.2
+Version: 1.3
 Author: Robin Wilson
 Author URI: http://www.rewweb.co.uk
 License: GPL2
@@ -35,9 +35,11 @@ License: GPL2
 $bsp_style_settings_f = get_option( 'bsp_style_settings_f' );
 $bsp_style_settings_ti = get_option( 'bsp_style_settings_ti' );
 $bsp_style_settings_t = get_option( 'bsp_style_settings_t' );
+$bsp_style_settings_form = get_option( 'bsp_style_settings_form' );
 $bsp_forum_display = get_option( 'bsp_forum_display' );
 $bsp_login = get_option( 'bsp_login' );
 $bsp_breadcrumb = get_option( 'bsp_breadcrumb' );
+
 
 
 if(!defined('BSP_PLUGIN_DIR'))
@@ -52,6 +54,7 @@ include(BSP_PLUGIN_DIR . '/includes/settings.php');
 include(BSP_PLUGIN_DIR . '/includes/style_settingsf.php');
 include(BSP_PLUGIN_DIR . '/includes/style_settingst.php');
 include(BSP_PLUGIN_DIR . '/includes/style_settingsti.php');
+include(BSP_PLUGIN_DIR . '/includes/style_settingsform.php');
 include(BSP_PLUGIN_DIR . '/includes/forum_display.php');
 include(BSP_PLUGIN_DIR . '/includes/functions.php');
 include(BSP_PLUGIN_DIR . '/includes/generate_css.php');
@@ -61,6 +64,9 @@ include(BSP_PLUGIN_DIR . '/includes/shortcode_display.php');
 include(BSP_PLUGIN_DIR . '/includes/shortcodes.php');
 include(BSP_PLUGIN_DIR . '/includes/extras.php');
 include(BSP_PLUGIN_DIR . '/includes/help.php');
+
+
+
 
 
 

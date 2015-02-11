@@ -214,6 +214,42 @@ function bsp_breadcrumbs ($args) {
 add_filter('bbp_before_get_breadcrumb_parse_args', 'bsp_breadcrumbs');
 
 
+/**********Hide admin bar   ********/
+function bsp_hide_admin() {
+global $bsp_login ;
+$user_id = wp_get_current_user()->ID;
+$role = bbp_get_user_role( $user_id );
+
+if ($bsp_login['hide_moderator'] == true  ) {
+	if ($role == 'bbp_moderator') show_admin_bar(false);
+}
+if ($bsp_login['hide_participant'] == true  ) {
+	if ($role == 'bbp_participant') show_admin_bar(false);
+}
+if ($bsp_login['hide_spectator'] == true  ) {
+	if ($role == 'bbp_spectator') show_admin_bar(false);
+}
+if ($bsp_login['hide_blocked'] == true  ) {
+	if ($role == 'bbp_blocked') show_admin_bar(false);
+}
+}
+
+add_action( 'plugins_loaded', 'bsp_hide_admin' );
+
+
+//This function changes the text wherever it is quoted
+function bsp_change_text( $translated_text ) {
+global $bsp_login ;
+	if ( $translated_text == 'You are already logged in.' ) {
+	$translated_text = $bsp_login['Login/logoutLogged in text'];
+	}
+	return $translated_text;
+}
+
+if (!empty ($bsp_login['Login/logoutLogged in text'] )) add_filter( 'gettext', 'bsp_change_text', 20 );
+
+
+
 
 					
 

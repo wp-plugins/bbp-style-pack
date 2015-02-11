@@ -28,15 +28,16 @@ function bsp_settings_page()
 		<?php // sets up the tabs ?>			
 		<h2 class="nav-tab-wrapper">
 		
-	<a href="?page=bbp-style-pack&tab=forums_index_styling" class="nav-tab <?php echo $active_tab == 'forums_index_styling' ? 'nav-tab-active' : ''; ?>">a. Forums Index Styling</a>
-	<a href="?page=bbp-style-pack&tab=topic_index_styling" class="nav-tab <?php echo $active_tab == 'topic_index_styling' ? 'nav-tab-active' : ''; ?>">b. Topics Index Styling</a>	
-	<a href="?page=bbp-style-pack&tab=topic_styling" class="nav-tab <?php echo $active_tab == 'topic_styling' ? 'nav-tab-active' : ''; ?>">c. Topic/Reply Styling</a>
-	<a href="?page=bbp-style-pack&tab=forum_display" class="nav-tab <?php echo $active_tab == 'forum_display' ? 'nav-tab-active' : ''; ?>">d. Forum Display</a>
-	<a href="?page=bbp-style-pack&tab=login" class="nav-tab <?php echo $active_tab == 'login' ? 'nav-tab-active' : ''; ?>">e. Login</a>
-	<a href="?page=bbp-style-pack&tab=breadcrumb" class="nav-tab <?php echo $active_tab == 'breadcrumb' ? 'nav-tab-active' : ''; ?>">f. Breadcrumbs </a>
-	<a href="?page=bbp-style-pack&tab=shortcodesd" class="nav-tab <?php echo $active_tab == 'shortcodesd' ? 'nav-tab-active' : ''; ?>">g. Shortcodes </a>
-	<a href="?page=bbp-style-pack&tab=extras" class="nav-tab <?php echo $active_tab == 'extras' ? 'nav-tab-active' : ''; ?>">h. Extras </a>
-	<a href="?page=bbp-style-pack&tab=help" class="nav-tab <?php echo $active_tab == 'help' ? 'nav-tab-active' : ''; ?>">i. Help </a>
+	<a href="?page=bbp-style-pack&tab=forums_index_styling" class="nav-tab <?php echo $active_tab == 'forums_index_styling' ? 'nav-tab-active' : ''; ?>">Forums Index Styling</a>
+	<a href="?page=bbp-style-pack&tab=topic_index_styling" class="nav-tab <?php echo $active_tab == 'topic_index_styling' ? 'nav-tab-active' : ''; ?>">Topics Index Styling</a>	
+	<a href="?page=bbp-style-pack&tab=topic_styling" class="nav-tab <?php echo $active_tab == 'topic_styling' ? 'nav-tab-active' : ''; ?>">Topic/Reply Styling</a>
+	<a href="?page=bbp-style-pack&tab=topic_form" class="nav-tab <?php echo $active_tab == 'topic_form' ? 'nav-tab-active' : ''; ?>">Topic/Reply Form</a>
+	<a href="?page=bbp-style-pack&tab=forum_display" class="nav-tab <?php echo $active_tab == 'forum_display' ? 'nav-tab-active' : ''; ?>">Forum Display</a>
+	<a href="?page=bbp-style-pack&tab=login" class="nav-tab <?php echo $active_tab == 'login' ? 'nav-tab-active' : ''; ?>">Login</a>
+	<a href="?page=bbp-style-pack&tab=breadcrumb" class="nav-tab <?php echo $active_tab == 'breadcrumb' ? 'nav-tab-active' : ''; ?>">Breadcrumbs </a>
+	<a href="?page=bbp-style-pack&tab=shortcodesd" class="nav-tab <?php echo $active_tab == 'shortcodesd' ? 'nav-tab-active' : ''; ?>">Shortcodes </a>
+	<a href="?page=bbp-style-pack&tab=extras" class="nav-tab <?php echo $active_tab == 'extras' ? 'nav-tab-active' : ''; ?>">Extras </a>
+	<a href="?page=bbp-style-pack&tab=help" class="nav-tab <?php echo $active_tab == 'help' ? 'nav-tab-active' : ''; ?>">Help </a>
 	
 	
 	</h2>
@@ -77,6 +78,11 @@ bsp_style_settings_t();
 if ($active_tab == 'forum_display' ) {
 bsp_forum_display();
 }
+//****  topic form settings
+if ($active_tab == 'topic_form' ) {
+bsp_style_settings_form();
+}
+
 //****  login settings
 if ($active_tab == 'login' ) {
 bsp_login_settings();
@@ -111,6 +117,7 @@ function bsp_register_settings() {
 	register_setting( 'bsp_style_settings_f', 'bsp_style_settings_f' );
 	register_setting( 'bsp_style_settings_ti', 'bsp_style_settings_ti' );
 	register_setting( 'bsp_style_settings_t', 'bsp_style_settings_t' );
+	register_setting( 'bsp_style_settings_form', 'bsp_style_settings_form' );
 	register_setting( 'bsp_forum_display', 'bsp_forum_display' );
 	register_setting( 'bsp_login', 'bsp_login' );
 	register_setting( 'bsp_breadcrumb', 'bsp_breadcrumb' );
