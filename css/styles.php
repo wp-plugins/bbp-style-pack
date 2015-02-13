@@ -361,15 +361,15 @@ Font-weight:  normal ;
  
   /*----------------------  Font - forum description --------------------------*/
  
-
- 
+/*Note we also set bsp-forum-content as if add descriptions are set in forum display, then we need to replicate these settings */ 
   
 <?php 
 $field=$dataf['Forum Description FontSize'] ;
 if (!empty ($field)) {
 if (is_numeric($field)) $field=$field.'px' ;
 ?>
-#bbpress-forums .bbp-forum-content
+#bbpress-forums .bbp-forum-content, 
+#bbpress-forums .bsp-forum-content
  
  {
 font-size:  <?php echo $field ; ?> ;
@@ -380,7 +380,8 @@ font-size:  <?php echo $field ; ?> ;
 $field=$dataf['Forum Description FontColor'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums .bbp-forum-content
+#bbpress-forums .bbp-forum-content,
+#bbpress-forums .bsp-forum-content
  
  {
 color:  <?php echo $field ; ?> ;
@@ -391,7 +392,8 @@ color:  <?php echo $field ; ?> ;
 $field=$dataf['Forum Description FontFont'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums .bbp-forum-content
+#bbpress-forums .bbp-forum-content,
+#bbpress-forums .bsp-forum-content
  
  {
 Font-Family:  <?php echo $field ; ?> ;
@@ -403,7 +405,8 @@ $field=$dataf['Forum Description FontStyle'] ;
 if (!empty ($field)) {
 if (strpos($field,'Italic') !== false) {
 ?>
-#bbpress-forums .bbp-forum-content
+#bbpress-forums .bbp-forum-content,
+#bbpress-forums .bsp-forum-content
  
  {
 Font-Style:  italic ; 
@@ -412,14 +415,16 @@ Font-Style:  italic ;
 
 if (strpos($field,'Bold') !== false) {
 ?>
-#bbpress-forums .bbp-forum-content
+#bbpress-forums .bbp-forum-content,
+#bbpress-forums .bsp-forum-content
  
  {
 Font-weight:  bold ; 
  }
  <?php }
  else {?>
- #bbpress-forums .bbp-forum-content
+ #bbpress-forums .bbp-forum-content,
+ #bbpress-forums .bsp-forum-content
  
  {
 Font-weight:  normal ; 

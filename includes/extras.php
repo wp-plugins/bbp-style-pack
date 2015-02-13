@@ -28,11 +28,15 @@ function bsp_extras() {
 <p>To use this template : </p>
 
 <p>1. Create a directory on your theme called 'bbpress'</p>
-<p> ie wp-content/%your-theme-name%/bbpress </p>
+ 
+<p>ie wp-content/themes/%your-theme-name%/bbpress</p>
 
-<p>2. Find wp-content/plugins/bbp-style-pack/extras/loop-forums.php and make a copy
+<p>where %your-theme-name% is the name of your theme</p>
+
+
+<p>2. Find wp-content/plugins/bbp-style-pack/extras/loop-forums.php and make a copy</p>
 <p> 3. Paste this copy into the directory called bbpress that you created in 1. above, so you end up with</p>
-<p>wp-content/%your-theme-name%/bbpress/loop-forums.php</p>
+<p>wp-content/themes/%your-theme-name%/bbpress/loop-forums.php</p>
 <p/>
 <p>To stop using this just delete the file wp-content/%your-theme-name%/bbpress/loop-forums.php</p>
 

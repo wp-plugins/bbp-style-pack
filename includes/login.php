@@ -24,7 +24,6 @@ function bsp_login_settings() {
 <p>c. Or use a page or post to display the widget using the shortcode  [bbp-login]</p>
 <p>d. The following adds a simple login/logout to your menu and/or Register/Edit Profile</p>
 <p> This can the give you the combination of 'login/Register' and 'logout/edit profile' as a menu display, which means users only see relevant items</p>
-<p> When you have done this, you can hide the awful Wordpress toolbar from those that don't need it, as login and profile are now on the menu. Item 7 lets you do this !
 <p></p>
 <?php 
 global $bsp_login ;
@@ -158,45 +157,7 @@ global $bsp_login ;
 	
 	
 	
-<!--Hide admnin bar ---------------------------------------------------------------------->			
-			<tr>
-	<th colspan="2">7. Hide toolbar/admin bar</th>
-	<td colspan="2">
-	<?php
-			$item =  'bsp_login[hide_moderator]' ;
-			$item1 =  $bsp_login['hide_moderator'] ;
-			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$item1, false ) . ' /> Hide for Moderators';
-  			?>
-	</td></tr>
-	<tr>
-	<td colspan="2"></td>
-	<td colspan="2">
-	<?php
-			$item =  'bsp_login[hide_participant]' ;
-			$item1 =  $bsp_login['hide_participant'] ;
-			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$item1, false ) . ' /> Hide for Participants';
-  			?>
-	</td></tr>
-	<tr>
-	<td colspan="2"></td>
-	<td colspan="2">
-	<?php
-			$item =  'bsp_login[hide_spectator]' ;
-			$item1 =  $bsp_login['hide_spectator'] ;
-			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$item1, false ) . ' /> Hide for Spectators';
-  			?>
-	</td></tr>
-	<tr>
-	<td colspan="2"></td>
-	<td colspan="2">
-	<?php
-			$item =  'bsp_login[hide_blocked]' ;
-			$item1 =  $bsp_login['hide_blocked'] ;
-			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$item1, false ) . ' /> Hide for Blocked';
-  			?>
-	</td></tr>
-	
-	
+
 	
 	
 	
