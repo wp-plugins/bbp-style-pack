@@ -40,6 +40,7 @@ To install this plugin :
 
 == Changelog ==
 
+1.5 Fix sticky topics background, fixed forum description font
 1.4 Add version-ing.  Fix save style.css.  Fix backend forum administration going on some themes.
 1.3 Topic/reply form styling added.  Ability to hide toolbar added.  
 1.2 Several errors in 1.1 fixed

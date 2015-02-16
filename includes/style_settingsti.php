@@ -373,6 +373,31 @@ function bsp_style_settings_ti () {
 			</td>
 			</tr>
 			
+<!--Sticky Topic background ------------------------------------------------------------------->
+			<tr>
+			<?php 
+			$name = 'Sticky Topic/Reply' ;
+			$area1='Background color - sticky topic' ;
+			$area2='Background color - super sticky topic' ;
+			$item1="bsp_style_settings_ti[".$name.$area1."]" ;
+			$item2="bsp_style_settings_ti[".$name.$area2."]" ;
+			?>
+			<th><?php echo '9. '.$name ?></th>
+			<td> <?php echo $area1 ; ?> </td>
+			<td>
+			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_ti[$name.$area1] ).'"<br>' ; ?> 
+			<label class="description"><?php _e( 'Default #ffffe0  Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
+			</td>
+			</tr>
+			<tr>
+			<td></td>
+			<td> <?php echo $area2 ; ?> </td>
+			<td>
+			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_style_settings_ti[$name.$area2] ).'"<br>' ; ?> 
+			<label class="description"><?php _e( 'Default #ffffe0 Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
+			</td>
+			</tr>
+			
 			
 			
 			

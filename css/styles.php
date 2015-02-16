@@ -369,8 +369,8 @@ if (!empty ($field)) {
 if (is_numeric($field)) $field=$field.'px' ;
 ?>
 #bbpress-forums .bbp-forum-content, 
-#bbpress-forums .bsp-forum-content
- 
+#bbpress-forums .bsp-forum-content,
+#bbpress-forums .bbp-forum-info .bbp-forum-content
  {
 font-size:  <?php echo $field ; ?> ;
  }
@@ -381,7 +381,8 @@ $field=$dataf['Forum Description FontColor'] ;
 if (!empty ($field)) {
 ?>
 #bbpress-forums .bbp-forum-content,
-#bbpress-forums .bsp-forum-content
+#bbpress-forums .bsp-forum-content,
+#bbpress-forums .bbp-forum-info .bbp-forum-content
  
  {
 color:  <?php echo $field ; ?> ;
@@ -393,7 +394,8 @@ $field=$dataf['Forum Description FontFont'] ;
 if (!empty ($field)) {
 ?>
 #bbpress-forums .bbp-forum-content,
-#bbpress-forums .bsp-forum-content
+#bbpress-forums .bsp-forum-content,
+#bbpress-forums .bbp-forum-info .bbp-forum-content
  
  {
 Font-Family:  <?php echo $field ; ?> ;
@@ -406,7 +408,8 @@ if (!empty ($field)) {
 if (strpos($field,'Italic') !== false) {
 ?>
 #bbpress-forums .bbp-forum-content,
-#bbpress-forums .bsp-forum-content
+#bbpress-forums .bsp-forum-content,
+#bbpress-forums .bbp-forum-info .bbp-forum-content
  
  {
 Font-Style:  italic ; 
@@ -416,7 +419,8 @@ Font-Style:  italic ;
 if (strpos($field,'Bold') !== false) {
 ?>
 #bbpress-forums .bbp-forum-content,
-#bbpress-forums .bsp-forum-content
+#bbpress-forums .bsp-forum-content,
+#bbpress-forums .bbp-forum-info .bbp-forum-content
  
  {
 Font-weight:  bold ; 
@@ -424,7 +428,8 @@ Font-weight:  bold ;
  <?php }
  else {?>
  #bbpress-forums .bbp-forum-content,
- #bbpress-forums .bsp-forum-content
+ #bbpress-forums .bsp-forum-content,
+ #bbpress-forums .bbp-forum-info .bbp-forum-content
  
  {
 Font-weight:  normal ; 
@@ -759,6 +764,33 @@ Font-weight:  normal ;
 
  
 /*********_________________TOPIC INDEX___________________________________________*/ 
+
+
+/*----------------------  sticky/super sticky background --------------------------*/
+
+
+<?php 
+$field=$datati['Sticky Topic/ReplyBackground color - sticky topic'] ;
+if (!empty ($field)) {
+?>
+
+
+.bbp-topics ul.sticky,
+.bbp-forum-content ul.sticky {
+	background-color: <?php echo $field ;?> !important;
+}
+<?php } ?>
+
+<?php 
+$field=$datati['Sticky Topic/ReplyBackground color - super sticky topic'] ;
+if (!empty ($field)) {
+?>
+.bbp-topics-front ul.super-sticky,
+.bbp-topics ul.super-sticky {
+	background-color: <?php echo $field ;?> !important;
+}
+
+<?php } ?>
 
 /*----------------------  Font - pagination --------------------------*/
  
