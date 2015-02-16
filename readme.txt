@@ -8,7 +8,7 @@ Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-For bbPress - Lets you style bbpress, and add display features
+For bbPress - Lets you style bbpress, and add display features.
 == Description ==
 This Plugin lets you style bbpress, and add display features
 
