@@ -4,11 +4,11 @@ Tags: forum, bbpress, bbp, style
 Requires at least: 3.0.1
 Donate link: http://www.rewweb.co.uk/donate
 Tested up to: 4.1
-Stable tag: 1.5
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-For bbPress - Lets you style bbpress, and add display features.
+For bbPress - Lets you style bbpress, and add display features
 == Description ==
 This Plugin lets you style bbpress, and add display features
 
@@ -40,6 +40,8 @@ To install this plugin :
 
 == Changelog ==
 
+
+1.6 Fix topic/reply text font, added forum info styling, fix reply form focus, fix topic headers
 1.5 Fix sticky topics background, fixed forum description font
 1.4 Add version-ing.  Fix save style.css.  Fix backend forum administration going on some themes.
 1.3 Topic/reply form styling added.  Ability to hide toolbar added.  

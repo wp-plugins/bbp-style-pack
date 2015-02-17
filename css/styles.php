@@ -766,33 +766,9 @@ Font-weight:  normal ;
 /*********_________________TOPIC INDEX___________________________________________*/ 
 
 
-/*----------------------  sticky/super sticky background --------------------------*/
 
 
-<?php 
-$field=$datati['Sticky Topic/ReplyBackground color - sticky topic'] ;
-if (!empty ($field)) {
-?>
-
-
-.bbp-topics ul.sticky,
-.bbp-forum-content ul.sticky {
-	background-color: <?php echo $field ;?> !important;
-}
-<?php } ?>
-
-<?php 
-$field=$datati['Sticky Topic/ReplyBackground color - super sticky topic'] ;
-if (!empty ($field)) {
-?>
-.bbp-topics-front ul.super-sticky,
-.bbp-topics ul.super-sticky {
-	background-color: <?php echo $field ;?> !important;
-}
-
-<?php } ?>
-
-/*----------------------  Font - pagination --------------------------*/
+/*  1 ----------------------  Font - pagination --------------------------*/
  
 <?php 
 $field=$datati['Pagination FontSize'] ;
@@ -865,7 +841,7 @@ Font-weight:  normal ;
 ?>
 
 
-/*----------------------  Font - voice/post count --------------------------*/
+/*  2 ----------------------  Font - voice/post count --------------------------*/
  
 <?php 
 $field=$datati['Voice/Post Count FontSize'] ;
@@ -937,7 +913,7 @@ Font-weight:  normal ;
 
 ?>
 
- /*----------------------  topic title Font - links --------------------------*/
+ /*  3 ----------------------  topic title Font - links --------------------------*/
  
 <?php 
 $field=$datati['Topic Title LinksLink Color'] ;
@@ -974,7 +950,7 @@ color:  <?php echo $field ; ?> ;
  
  
 
-/*----------------------  Font - Topic Title --------------------------*/
+/*  4 ----------------------  Font - Topic Title --------------------------*/
  
 <?php 
 $field=$datati['Topic Title FontSize'] ;
@@ -1032,7 +1008,7 @@ Font-weight:  normal ;
  }
  ?>
  
- /*----------------------  Font - template notice --------------------------*/
+ /*  5 ----------------------  Font - template notice --------------------------*/
  
 <?php 
 $field=$datati['Template Notice FontSize'] ;
@@ -1104,7 +1080,7 @@ Font-weight:  normal ;
 
 ?>
 
-/*----------------------  Font - template background --------------------------*/
+/*  6 ----------------------  Font - template background --------------------------*/
  
 <?php 
 $field=$datati['Template NoticeBackground color'] ;
@@ -1120,7 +1096,7 @@ background-color:  <?php echo $field ; ?> ;
 
 
 
-/*----------------------  Font - template border --------------------------*/
+/*  7 ----------------------  Font - template border --------------------------*/
  
 <?php 
 
@@ -1143,7 +1119,7 @@ Border:  <?php echo $field ; ?> ;
  
 
  
- /*----------------------  Font - Started by --------------------------*/
+/*  8 ----------------------  Font - Started by --------------------------*/
  
 <?php 
 $field=$datati['Topic Started bySize'] ;
@@ -1214,6 +1190,152 @@ Font-weight:  normal ;
 }
 
 ?>
+/*  9 ----------------------  sticky/super sticky background --------------------------*/
+
+
+<?php 
+$field=$datati['Sticky Topic/ReplyBackground color - sticky topic'] ;
+if (!empty ($field)) {
+?>
+
+
+.bbp-topics ul.sticky,
+.bbp-forum-content ul.sticky {
+	background-color: <?php echo $field ;?> !important;
+}
+<?php } ?>
+
+<?php 
+$field=$datati['Sticky Topic/ReplyBackground color - super sticky topic'] ;
+if (!empty ($field)) {
+?>
+.bbp-topics-front ul.super-sticky,
+.bbp-topics ul.super-sticky {
+	background-color: <?php echo $field ;?> !important;
+}
+
+<?php } ?>
+
+
+
+
+/*  10. ----------------------  Font - forum info notice (also does topic info)--------------------------*/
+ 
+<?php 
+$field=$datati['Forum Information FontSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+#bbpress-forums div.bbp-template-notice.info .bbp-forum-description,
+#bbpress-forums div.bbp-template-notice.info .bbp-topic-description 
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datati['Forum Information FontColor'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums div.bbp-template-notice.info .bbp-forum-description,
+#bbpress-forums div.bbp-template-notice.info .bbp-topic-description 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ <?php 
+$field=$datati['Forum Information FontFont'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums div.bbp-template-notice.info .bbp-forum-description,
+#bbpress-forums div.bbp-template-notice.info .bbp-topic-description 
+ 
+ {
+Font-Family::  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datati['Forum Information FontStyle'] ;
+
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+#bbpress-forums div.bbp-template-notice.info .bbp-forum-description,
+#bbpress-forums div.bbp-template-notice.info .bbp-topic-description 
+ 
+ {
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+#bbpress-forums div.bbp-template-notice.info .bbp-forum-description,
+#bbpress-forums div.bbp-template-notice.info .bbp-topic-description 
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+ else { ?>
+ #bbpress-forums div.bbp-template-notice.info .bbp-forum-description,
+#bbpress-forums div.bbp-template-notice.info .bbp-topic-description 
+ 
+ {
+Font-weight:  normal ; 
+ }
+ 
+ 
+ <?php
+}
+ 
+}
+
+?>
+
+/* 11 ----------------------  Font - forum info background  (also does topic info)--------------------------*/
+ 
+<?php 
+$field=$datati['Forum InformationBackground color'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums div.bbp-template-notice.info
+ 
+ {
+background-color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+
+
+/*  12 ----------------------  Font - forum info border  (also does topic info)--------------------------*/
+ 
+<?php 
+
+$field1=$datati['Forum Information BorderLine width'] ;
+$field2=$datati['Forum Information BorderLine style'] ; ;
+$field3=$datati['Forum Information BorderLine color'] ;
+
+if (!empty ($field1) || !empty ($field2) ||!empty ($field3)) {
+	if (empty ($field1)) $field1 = '1px' ;
+	if (is_numeric($field1)) $field1=$field1.'px' ;
+	//if (empty ($field2)) $field2 = 'solid' ;
+	$field=$field1.' '.$field2.' '.$field3
+?>
+#bbpress-forums div.bbp-template-notice.info
+ 
+ {
+Border:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+
+
 
  
 
@@ -1222,7 +1344,7 @@ Font-weight:  normal ;
 
 
  
- /*----------------------topic/reply backgrounds   --------------------------*/
+ /*  1 ----------------------topic/reply backgrounds   --------------------------*/
 
 <?php 
 $field=$datat['Topic/Reply ContentBackground color - odd numbers'] ;
@@ -1244,7 +1366,7 @@ background-color: <?php echo $field ; ?> ;
  }
  <?php } ?>
  
-  /*----------------------  Topic/reply header background --------------------------*/
+  /*  2 ----------------------  Topic/reply header background --------------------------*/
  
 <?php 
 $field=$datat['Topic/Reply HeaderBackground color'] ;
@@ -1261,7 +1383,7 @@ background-color: <?php echo $field ; ?> ;
  
  
  
- /*----------------------  Trash/Spam backgrounds --------------------------*/
+ /*  3 ----------------------  Trash/Spam backgrounds --------------------------*/
  
 <?php 
 $field=$datat['Trash/Spam ContentBackground color - odd numbers'] ;
@@ -1285,7 +1407,7 @@ background-color: <?php echo $field ; ?> ;
  }
  <?php } ?>
  
- /*----------------------  Closed Topic backgrounds --------------------------*/
+ /*  4 ----------------------  Closed Topic backgrounds --------------------------*/
  
 <?php 
 $field=$datat['Closed Topic ContentBackground color'] ;
@@ -1298,7 +1420,7 @@ background-color: <?php echo $field ; ?> ;
  }
  <?php } ?>
  
-  /*----------------------  Font - topic/reply date --------------------------*/
+  /*  5 ----------------------  Font - topic/reply date --------------------------*/
  
 
  
@@ -1372,7 +1494,7 @@ Font-weight:  normal ;
 
  
  
- /*----------------------  Font - topic/reply text --------------------------*/
+ /*  6 ----------------------  Font - topic/reply text --------------------------*/
  
 
  
@@ -1381,8 +1503,8 @@ $field=$datat['Topic/Reply Text FontSize'] ;
 if (!empty ($field)) {
 if (is_numeric($field)) $field=$field.'px' ;
 ?>
-#bbpress-forums .bbp-topic-content p, 
-#bbpress-forums .bbp-reply-content p
+#bbpress-forums .bbp-topic-content, 
+#bbpress-forums .bbp-reply-content
  
  {
 font-size:  <?php echo $field ; ?> ;
@@ -1393,8 +1515,8 @@ font-size:  <?php echo $field ; ?> ;
 $field=$datat['Topic/Reply Text FontColor'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums .bbp-topic-content p, 
-#bbpress-forums .bbp-reply-content p
+#bbpress-forums .bbp-topic-content, 
+#bbpress-forums .bbp-reply-content
  
  {
 color:  <?php echo $field ; ?> ;
@@ -1405,8 +1527,8 @@ color:  <?php echo $field ; ?> ;
 $field=$datat['Topic/Reply Text FontFont'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums .bbp-topic-content p, 
-#bbpress-forums .bbp-reply-content p
+#bbpress-forums .bbp-topic-content, 
+#bbpress-forums .bbp-reply-content
  
  {
 Font-Family:  <?php echo $field ; ?> ;
@@ -1418,8 +1540,8 @@ $field=$datat['Topic/Reply Text FontStyle'] ;
 if (!empty ($field)) {
 if (strpos($field,'Italic') !== false) {
 ?>
-#bbpress-forums .bbp-topic-content p,
-#bbpress-forums .bbp-reply-content p
+#bbpress-forums .bbp-topic-content,
+#bbpress-forums .bbp-reply-content
  {
 Font-Style:  italic ; 
  }
@@ -1427,16 +1549,16 @@ Font-Style:  italic ;
 
 if (strpos($field,'Bold') !== false) {
 ?>
-#bbpress-forums .bbp-topic-content p,
-#bbpress-forums .bbp-reply-content p
+#bbpress-forums .bbp-topic-content,
+#bbpress-forums .bbp-reply-content
  
  {
 Font-weight:  bold ; 
  }
  <?php }
 else {?>
-#bbpress-forums .bbp-topic-content p,
-#bbpress-forums .bbp-reply-content p
+#bbpress-forums .bbp-topic-content,
+#bbpress-forums .bbp-reply-content
  
  {
 Font-weight:  normal ; 
@@ -1447,7 +1569,7 @@ Font-weight:  normal ;
  ?>
  
  
- /*----------------------  Font - Author name --------------------------*/
+ /*  7 ----------------------  Font - Author name --------------------------*/
  
 <?php 
 $field=$datat['Author Name FontSize'] ;
@@ -1506,7 +1628,7 @@ Font-weight:  normal ;
  ?>
  
  
-  /*----------------------  Font - reply permalink --------------------------*/
+  /*  8 ----------------------  Font - reply permalink --------------------------*/
  
 <?php 
 $field=$datat['Reply Link FontSize'] ;
@@ -1564,7 +1686,7 @@ Font-weight:  normal ;
  }
  ?>
  
-  /*----------------------  Font - author role --------------------------*/
+  /*  9 ----------------------  Font - author role --------------------------*/
  
 <?php 
 $field=$datat['Author RoleSize'] ;
@@ -1632,6 +1754,90 @@ Font-weight:  bold ;
  <?php }
  else {?>
  #bbpress-forums div.bbp-reply-author .bbp-author-role
+ 
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+  /*  10 ----------------------  Font - author role --------------------------*/
+ 
+<?php 
+$field=$datat['Topic HeaderSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+#bbpress-forums li.bbp-header .bbp-reply-content,
+#bbpress-forums li.bbp-header  .bbp-reply-author
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ <?php 
+$field=$datat['Topic HeaderColor'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums li.bbp-header .bbp-reply-content,
+#bbpress-forums li.bbp-header  .bbp-reply-author
+
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+ 
+ <?php 
+$field=$datat['Topic HeaderFont'] ;
+if (!empty ($field)) {
+?>
+#bbpress-forums li.bbp-header .bbp-reply-content,
+#bbpress-forums li.bbp-header  .bbp-reply-author
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datat['Topic HeaderStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+#bbpress-forums li.bbp-header .bbp-reply-content,
+#bbpress-forums li.bbp-header  .bbp-reply-author
+ 
+ {
+Font-Style:  italic ; 
+ }
+<?php }
+else {?>
+ #bbpress-forums li.bbp-header .bbp-reply-content,
+#bbpress-forums li.bbp-header  .bbp-reply-author
+ 
+ {
+Font-Style:  normal ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+#bbpress-forums li.bbp-header .bbp-reply-content,
+#bbpress-forums li.bbp-header  .bbp-reply-author
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+ else {?>
+#bbpress-forums li.bbp-header .bbp-reply-content,
+#bbpress-forums li.bbp-header  .bbp-reply-author
  
  {
 Font-weight:  normal ; 
@@ -1720,6 +1926,7 @@ $field=$dataform['Text areaBackground Color'] ;
 if (!empty ($field)) {
 ?>
 #bbpress-forums input[type="text"], textarea, 
+#bbpress-forums input[type="text"]:focus, textarea:focus,
 #bbpress-forums .quicktags-toolbar
  
  {
@@ -1864,9 +2071,11 @@ border-bottom-right-radius: 10px ;
 }	
 
 	
-	
-
 ?>
+
+
+
+
 
 
 
