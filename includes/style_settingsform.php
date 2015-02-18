@@ -152,6 +152,29 @@ function bsp_style_settings_form () {
 			</select>
 			</td>
 			</tr>
+<!--Button background ------------------------------------------------------------------->
+			<tr valign='top'>
+			<?php 
+			$name = 'Button' ;
+			$area1='Background Color' ;
+			$area2='Text Color' ;
+			$item1="bsp_style_settings_form[".$name.$area1."]" ;
+			$item2="bsp_style_settings_form[".$name.$area2."]" ;
+			?>
+			<th><?php echo '4. '.$name ?></th>
+			<td> <?php echo $area1 ; ?> </td>
+			<td>
+			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_form[$name.$area1] ).'"<br>' ; ?> 
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
+			</td>
+			</tr>
+			<tr><td></td>
+			<td> <?php echo $area2 ; ?> </td>
+			<td>
+			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_style_settings_form[$name.$area2] ).'"<br>' ; ?> 
+			<label class="description"><?php _e( 'Enter color by name or hex value - see help for further info', 'bbp-style-pack' ); ?></label><br/>
+			</td>
+			</tr>
 			
 			
 			

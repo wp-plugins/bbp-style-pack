@@ -10,7 +10,7 @@ $datafd=get_option('bsp_forum_display') ;
 
 
 
-/*----------------------  forum list backgrounds --------------------------*/
+/*  1 ----------------------  forum list backgrounds --------------------------*/
 <?php 
 $field=$dataf['Forum ContentBackground color - odd numbers'] ;
 if (!empty ($field)) {
@@ -33,7 +33,7 @@ if (!empty ($field)) {
 
 
  
- /*----------------------  headers backgrounds --------------------------*/
+ /*  2 ----------------------  headers backgrounds --------------------------*/
 
 <?php 
 $field=$dataf['Forum/Topic Headers/FootersBackground Color'] ;
@@ -49,7 +49,7 @@ if (!empty ($field)) {
  
  
  
- /*----------------------  Font - Forum headings --------------------------*/
+ /*  3 ----------------------  Font - Forum headings --------------------------*/
  
 <?php 
 $field=$dataf['Forum Headings FontSize'] ;
@@ -122,7 +122,7 @@ Font-weight:  normal ;
 ?>
 
  
- /*----------------------  Font - breadcrumb --------------------------*/
+ /*  4 ----------------------  Font - breadcrumb --------------------------*/
  
 
  
@@ -196,7 +196,7 @@ Font-weight:  normal ;
  
  
  
-  /*----------------------  Font - links --------------------------*/
+  /*  5 ----------------------  Font - links --------------------------*/
  
 <?php 
 $field=$dataf['LinksLink Color'] ;
@@ -235,7 +235,7 @@ color:  <?php echo $field ; ?> ;
  
 
 
- /*----------------------  Font - Forum and category lists --------------------------*/
+ /*  6 ----------------------  Font - Forum and category lists --------------------------*/
  
 <?php 
 $field=$dataf['Forum and Category List FontSize'] ;
@@ -299,7 +299,7 @@ Font-weight:  normal ;
  
  
  
- /*----------------------  Font - Sub Forum lists --------------------------*/
+ /*  7 ----------------------  Font - Sub Forum lists --------------------------*/
  
 <?php 
 $field=$dataf['Sub Forum List FontSize'] ;
@@ -359,7 +359,7 @@ Font-weight:  normal ;
  
  
  
-  /*----------------------  Font - forum description --------------------------*/
+  /*  8 ----------------------  Font - forum description --------------------------*/
  
 /*Note we also set bsp-forum-content as if add descriptions are set in forum display, then we need to replicate these settings */ 
   
@@ -442,7 +442,7 @@ Font-weight:  normal ;
  
  
  
-  /*----------------------  Font - Freshness --------------------------*/
+  /*  9 ----------------------  Font - Freshness --------------------------*/
  
 <?php 
 $field=$dataf['Freshness FontSize'] ;
@@ -500,7 +500,7 @@ Font-weight:  normal ;
  }
  ?>
  
- /*----------------------  Font - Freshness Author--------------------------*/
+ /*  10 ----------------------  Font - Freshness Author--------------------------*/
  
 <?php 
 $field=$dataf['Freshness Author FontSize'] ;
@@ -562,7 +562,7 @@ Font-weight:  normal ;
  
  
  
-  /*----------------------  Forum boarder --------------------------*/
+  /*  11 ----------------------  Forum boarder --------------------------*/
  
 <?php 
 $field1=$dataf['Forum BorderLine width'] ;
@@ -580,7 +580,8 @@ if (!empty ($field1) || !empty ($field2) ||!empty ($field3)) {
 #bbpress-forums ul.bbp-topics,
 #bbpress-forums .bbp-reply-header,
 #bbpress-forums div.odd,
-#bbpress-forums div.even
+#bbpress-forums div.even,
+#bbpress-forums ul.bbp-replies
 
 
   {
@@ -591,7 +592,8 @@ Border:  <?php echo $field ; ?> ;
 #bbpress-forums li.bbp-body ul.forum,
 #bbpress-forums li.bbp-body ul.topic,
 #bbpress-forums li.bbp-footer,
-#bbpress-forums ul.forum
+#bbpress-forums ul.forum,
+
 
 {
  
@@ -616,7 +618,7 @@ Border:  <?php echo $field ; ?> ;
 
 
 
- /*----------------------  Font - topic count --------------------------*/
+ /*   12 ----------------------  Font - topic count --------------------------*/
  
 <?php 
 $field=$dataf['Topic Count FontSize'] ;
@@ -690,7 +692,7 @@ Font-weight:  normal ;
 
 
 
- /*----------------------  Font - Post counts --------------------------*/
+ /*  13 ----------------------  Font - Post counts --------------------------*/
  
 <?php 
 $field=$dataf['Post Count FontSize'] ;
@@ -1771,7 +1773,9 @@ if (!empty ($field)) {
 if (is_numeric($field)) $field=$field.'px' ;
 ?>
 #bbpress-forums li.bbp-header .bbp-reply-content,
-#bbpress-forums li.bbp-header  .bbp-reply-author
+#bbpress-forums li.bbp-header  .bbp-reply-author,
+#bbpress-forums li.bbp-footer .bbp-reply-content,
+#bbpress-forums li.bbp-footer  .bbp-reply-author
  
  {
 font-size:  <?php echo $field ; ?> ;
@@ -1783,7 +1787,9 @@ $field=$datat['Topic HeaderColor'] ;
 if (!empty ($field)) {
 ?>
 #bbpress-forums li.bbp-header .bbp-reply-content,
-#bbpress-forums li.bbp-header  .bbp-reply-author
+#bbpress-forums li.bbp-header  .bbp-reply-author,
+#bbpress-forums li.bbp-footer .bbp-reply-content,
+#bbpress-forums li.bbp-footer  .bbp-reply-author
 
  
  {
@@ -1798,7 +1804,9 @@ $field=$datat['Topic HeaderFont'] ;
 if (!empty ($field)) {
 ?>
 #bbpress-forums li.bbp-header .bbp-reply-content,
-#bbpress-forums li.bbp-header  .bbp-reply-author
+#bbpress-forums li.bbp-header  .bbp-reply-author,
+#bbpress-forums li.bbp-footer .bbp-reply-content,
+#bbpress-forums li.bbp-footer  .bbp-reply-author
  
  {
 Font-Family:  <?php echo $field ; ?> ;
@@ -1811,7 +1819,9 @@ if (!empty ($field)) {
 if (strpos($field,'Italic') !== false) {
 ?>
 #bbpress-forums li.bbp-header .bbp-reply-content,
-#bbpress-forums li.bbp-header  .bbp-reply-author
+#bbpress-forums li.bbp-header  .bbp-reply-author,
+#bbpress-forums li.bbp-footer .bbp-reply-content,
+#bbpress-forums li.bbp-footer  .bbp-reply-author
  
  {
 Font-Style:  italic ; 
@@ -1819,7 +1829,9 @@ Font-Style:  italic ;
 <?php }
 else {?>
  #bbpress-forums li.bbp-header .bbp-reply-content,
-#bbpress-forums li.bbp-header  .bbp-reply-author
+#bbpress-forums li.bbp-header  .bbp-reply-author,
+#bbpress-forums li.bbp-footer .bbp-reply-content,
+#bbpress-forums li.bbp-footer  .bbp-reply-author
  
  {
 Font-Style:  normal ; 
@@ -1829,7 +1841,9 @@ Font-Style:  normal ;
 if (strpos($field,'Bold') !== false) {
 ?>
 #bbpress-forums li.bbp-header .bbp-reply-content,
-#bbpress-forums li.bbp-header  .bbp-reply-author
+#bbpress-forums li.bbp-header  .bbp-reply-author,
+#bbpress-forums li.bbp-footer .bbp-reply-content,
+#bbpress-forums li.bbp-footer  .bbp-reply-author
  
  {
 Font-weight:  bold ; 
@@ -1837,7 +1851,9 @@ Font-weight:  bold ;
  <?php }
  else {?>
 #bbpress-forums li.bbp-header .bbp-reply-content,
-#bbpress-forums li.bbp-header  .bbp-reply-author
+#bbpress-forums li.bbp-header  .bbp-reply-author,
+#bbpress-forums li.bbp-footer .bbp-reply-content,
+#bbpress-forums li.bbp-footer  .bbp-reply-author
  
  {
 Font-weight:  normal ; 
@@ -1850,7 +1866,7 @@ Font-weight:  normal ;
  
  /*********_________________TOPIC REPLY FORM___________________________________________*/ 
  
-  /*----------------------  Topic/reply Labels --------------------------*/
+  /*  1 ----------------------  Topic/reply Labels --------------------------*/
  
 <?php 
 $field=$dataform['LabelsSize'] ;
@@ -1918,7 +1934,7 @@ Font-weight:  normal ;
  }
  ?>
  
- /*----------------------  Text area background --------------------------*/
+ /*  2 ----------------------  Text area background --------------------------*/
  
  
  <?php 
@@ -1935,7 +1951,7 @@ background-color:  <?php echo $field ; ?> ;
  
  <?php } ?>
  
- /*----------------------  Text area font --------------------------*/
+ /*  3 ----------------------  Text area font --------------------------*/
  
 <?php 
 $field=$dataform['Text areaSize'] ;
@@ -2016,9 +2032,31 @@ Font-weight:  normal ;
  }
  ?>
  
- 
+ /*  4 ----------------------  button background --------------------------*/
 
+ <?php 
+$field=$dataform['ButtonBackground Color'] ;
+if (!empty ($field)) {
+?>
+
+#bbpress-forums .button {
+  background-color: <?php echo $field ; ?> ;
+  
+}
+
+ <?php } ?>
  
+ <?php 
+$field=$dataform['ButtonText Color'] ;
+if (!empty ($field)) {
+?>
+
+#bbpress-forums .button {
+  color: <?php echo $field ; ?> ;
+  
+}
+
+ <?php } ?>
  
  
  
@@ -2054,24 +2092,20 @@ if (!empty ($field)) {
 ?>	
 	.bbp-forums , .bbp-topics  , .bbp-replies  {
 	
-border-top: 1px solid #EEEEEE ;
 border-top-left-radius: 10px ;
 border-top-right-radius: 10px ;
-border-bottom: 1px solid #EEEEEE ;
 border-bottom-left-radius: 10px ;
 border-bottom-right-radius: 10px ;
 	}
 	
-#bbpress-forums .bbp-topic-freshness-author {
-	color : blue ;
-}
-	
+
 	
 <?php
 }	
 
 	
 ?>
+
 
 
 

@@ -40,7 +40,7 @@ To install this plugin :
 
 == Changelog ==
 
-
+1.7 Fix author in footer, fix borders and add hiding, add topic/reply form button styling
 1.6 Fix topic/reply text font, added forum info styling, fix reply form focus, fix topic headers
 1.5 Fix sticky topics background, fixed forum description font
 1.4 Add version-ing.  Fix save style.css.  Fix backend forum administration going on some themes.

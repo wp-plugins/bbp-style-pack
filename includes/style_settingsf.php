@@ -435,7 +435,7 @@ function bsp_style_settings_f () {
 			<td> <?php echo $area1 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item1.'" class="large-text" name="'.$item1.'" type="text" value="'.esc_html( $bsp_style_settings_f[$name.$area1] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Default 1px ', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default 1px  - Set to 0px to hide border', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			<tr>
