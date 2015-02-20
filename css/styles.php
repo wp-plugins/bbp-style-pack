@@ -2098,17 +2098,16 @@ border-bottom-left-radius: 10px ;
 border-bottom-right-radius: 10px ;
 	}
 	
-
-	
 <?php
 }	
-
-	
 ?>
 
+/*---------------------- latest activity widget styling--------------------------*/
 
-
-
+.bsp-forum {
+	
+Font-weight:  bold ; 
+ }
 
 
 

@@ -4,7 +4,7 @@
 Plugin Name: bbp style pack
 Plugin URI: http://www.rewweb.co.uk/bbp-style-pack/
 Description: This plugin adds styling and features to bbPress
-Version: 1.7
+Version: 1.8
 Author: Robin Wilson
 Author URI: http://www.rewweb.co.uk
 License: GPL2
@@ -63,6 +63,9 @@ include(BSP_PLUGIN_DIR . '/includes/shortcode_display.php');
 include(BSP_PLUGIN_DIR . '/includes/shortcodes.php');
 include(BSP_PLUGIN_DIR . '/includes/extras.php');
 include(BSP_PLUGIN_DIR . '/includes/help.php');
+include(BSP_PLUGIN_DIR . '/includes/widgets.php');
+include(BSP_PLUGIN_DIR . '/includes/widgets_settings.php');
+
 
 /**************************************
 *Versioning 
@@ -72,11 +75,11 @@ if (!defined('BSP_VERSION_KEY'))
     define('BSP_VERSION_KEY', 'bsp_version');
 
 if (!defined('BSP_VERSION_NUM'))
-    define('BSP_VERSION_NUM', '1.7');
+    define('BSP_VERSION_NUM', '1.8');
 
 add_option(BSP_VERSION_KEY, BSP_VERSION_NUM);
 
-$new_version = '1.7';
+$new_version = '1.8';
 
 if (get_option(BSP_VERSION_KEY) != $new_version) {
     // Execute the save to update the css file

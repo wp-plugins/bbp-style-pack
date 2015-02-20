@@ -5,6 +5,7 @@ Requires at least: 3.0.1
 Donate link: http://www.rewweb.co.uk/donate
 Tested up to: 4.1
 Stable tag: 1.7
+
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +41,7 @@ To install this plugin :
 
 == Changelog ==
 
+1.8 added latest activity widget
 1.7 Fix author in footer, fix borders and add hiding, add topic/reply form button styling
 1.6 Fix topic/reply text font, added forum info styling, fix reply form focus, fix topic headers
 1.5 Fix sticky topics background, fixed forum description font

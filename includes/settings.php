@@ -37,6 +37,7 @@ function bsp_settings_page()
 	<a href="?page=bbp-style-pack&tab=breadcrumb" class="nav-tab <?php echo $active_tab == 'breadcrumb' ? 'nav-tab-active' : ''; ?>">Breadcrumbs </a>
 	<a href="?page=bbp-style-pack&tab=shortcodesd" class="nav-tab <?php echo $active_tab == 'shortcodesd' ? 'nav-tab-active' : ''; ?>">Shortcodes </a>
 	<a href="?page=bbp-style-pack&tab=extras" class="nav-tab <?php echo $active_tab == 'extras' ? 'nav-tab-active' : ''; ?>">Extras </a>
+	<a href="?page=bbp-style-pack&tab=widgets" class="nav-tab <?php echo $active_tab == 'widgets' ? 'nav-tab-active' : ''; ?>">Widgets </a>
 	<a href="?page=bbp-style-pack&tab=help" class="nav-tab <?php echo $active_tab == 'help' ? 'nav-tab-active' : ''; ?>">Help </a>
 	
 	
@@ -97,6 +98,11 @@ bsp_breadcrumb_settings();
 //****  shortcode page
 if ($active_tab == 'shortcodesd' ) {
 bsp_shortcodes_display();
+}
+
+//****  widgets page
+if ($active_tab == 'widgets' ) {
+bsp_widgets();
 }
 
 //****  extras page
