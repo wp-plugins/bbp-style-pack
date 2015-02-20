@@ -2102,12 +2102,7 @@ border-bottom-right-radius: 10px ;
 }	
 ?>
 
-/*---------------------- latest activity widget styling--------------------------*/
 
-.bsp-forum {
-	
-Font-weight:  bold ; 
- }
 
 
 

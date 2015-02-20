@@ -31,7 +31,7 @@ function bsp_widgets() {
 
 <p>Dashboard>appearance>widgets  as (bbp style pack) Latest Activity</p>
 
-<p> and includes options doe displaying author, date and forum </p>
+<p> and includes options for displaying author, date and forum </p>
 
 
 

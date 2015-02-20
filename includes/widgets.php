@@ -151,9 +151,9 @@ class bsp_Activity_Widget extends WP_Widget {
 						
 						if (empty($reply)) printf( _x( 'topic by %1$s', 'widgets', 'bbpress' ), '<span class="topic-author">' . $author_link . '</span>' ); 
 						else printf( _x( 'reply by %1$s', 'widgets', 'bbpress' ), '<span class="topic-author">' . $author_link . '</span>' ); ?>
-
+						</div>
 					<?php endif; ?>
-					</div>
+					
 
 					<?php if ( ! empty( $settings['show_date'] ) ) : ?>
 
@@ -163,10 +163,12 @@ class bsp_Activity_Widget extends WP_Widget {
 					
 					<?php if ( ! empty( $settings['show_forum'] ) ) : ?>
 					<div>
-						<?php 
+						<?php
 						$forum = bbp_get_topic_forum_id($topic_id);
-						$forum = bbp_get_forum_title($forum) ;
-						printf( _x( 'in %1$s', 'widgets', 'bbpress' ), '<span class="bsp-forum">' . $forum . '</span>' ); ?>
+						$forum1 = bbp_get_forum_title($forum) ;
+						$forum2 = esc_url( bbp_get_forum_permalink( $forum )) ;
+						echo 'in ' ; ?>
+						<a class="bbp-forum-title" href="<?php echo $forum2; ?>"><?php echo $forum1 ; ?></a>
 					</div>
 					<?php endif; ?>
 				
