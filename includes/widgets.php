@@ -136,15 +136,26 @@ class bsp_Activity_Widget extends WP_Widget {
 				if ( ! empty( $settings['show_user'] ) ) {
 				//check if this topic has a reply
 				$reply = get_post_meta( $topic_id, '_bbp_last_reply_id',true);
+				//do we display avatar?
+					if (!empty ($settings['hide_avatar'])) $type='name' ;
+					else $type='both' ;
 				//if no reply the author
-				if (empty ($reply)) $author_link = bbp_get_topic_author_link( array( 'post_id' => $topic_id, 'type' => 'both', 'size' => 14 ) );
+				if (empty ($reply)) $author_link = bbp_get_topic_author_link( array( 'post_id' => $topic_id, 'type' => $type, 'size' => 14 ) );
 				//if has a reply then get the author of the reply
-				else $author_link = bbp_get_reply_author_link( array( 'post_id' => $reply, 'type' => 'both', 'size' => 14 ) );
+				else $author_link = bbp_get_reply_author_link( array( 'post_id' => $reply, 'type' => $type, 'size' => 14 ) );
 				} ?>
 
 				<li>
+				<?php 
+				//if no replies set the link to the topic
+				if (empty ($reply)) {?>
 					<a class="bbp-forum-title" href="<?php bbp_topic_permalink( $topic_id ); ?>"><?php bbp_topic_title( $topic_id ); ?></a>
-
+				<?php } 
+				//if replies then set link to the latest reply
+				else { 
+					echo '<a class="bbp-reply-topic-title" href="' . esc_url( bbp_get_reply_url( $reply ) ) . '" title="' . esc_attr( bbp_get_reply_excerpt( $reply, 50 ) ) . '">' . bbp_get_reply_topic_title( $reply ) . '</a>';
+				} ?>
+				
 					<?php if ( ! empty( $author_link ) ) : ?>
 						<div>
 						<?php 
@@ -155,9 +166,13 @@ class bsp_Activity_Widget extends WP_Widget {
 					<?php endif; ?>
 					
 
-					<?php if ( ! empty( $settings['show_date'] ) ) : ?>
-
-						<div><?php bbp_topic_last_active_time( $topic_id ); ?></div>
+					<?php if ( ! empty( $settings['show_freshness'] ) ) : ?>
+					<?php $output = bbp_get_topic_last_active_time( $topic_id ) ; 
+						//shorten freshness?
+						if ( ! empty( $settings['shorten_freshness'] ) ) $output = preg_replace( '/, .*[^ago]/', ' ', $output ); ?>
+						<div><?php 
+						echo $output ;
+						//bbp_topic_last_active_time( $topic_id ); ?></div>
 					
 					<?php endif; ?>
 					
@@ -201,10 +216,12 @@ class bsp_Activity_Widget extends WP_Widget {
 		$instance['title']        = strip_tags( $new_instance['title'] );
 		$instance['order_by']     = strip_tags( $new_instance['order_by'] );
 		$instance['parent_forum'] = sanitize_text_field( $new_instance['parent_forum'] );
-		$instance['show_date']    = (bool) $new_instance['show_date'];
+		$instance['show_freshness']    = (bool) $new_instance['show_freshness'];
 		$instance['show_user']    = (bool) $new_instance['show_user'];
 		$instance['show_forum']    = (bool) $new_instance['show_forum'];
 		$instance['max_shown']    = (int) $new_instance['max_shown'];
+		$instance['shorten_freshness']    = (int) $new_instance['shorten_freshness'];
+		$instance['hide_avatar']    = (int) $new_instance['hide_avatar'];
 
 		// Force to any
 		if ( !empty( $instance['parent_forum'] ) && !is_numeric( $instance['parent_forum'] ) ) {
@@ -241,9 +258,12 @@ class bsp_Activity_Widget extends WP_Widget {
 			<small><?php _e( '"0" to show only root - "any" to show all', 'bbpress' ); ?></small>
 		</p>
 
-		<p><label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Show post date:',    'bbpress' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" <?php checked( true, $settings['show_date'] ); ?> value="1" /></label></p>
+		<p><label for="<?php echo $this->get_field_id( 'show_freshness' ); ?>"><?php _e( 'Show Freshness:',    'bbpress' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'show_freshness' ); ?>" name="<?php echo $this->get_field_name( 'show_freshness' ); ?>" <?php checked( true, $settings['show_freshness'] ); ?> value="1" /></label></p>
+		<p><label for="<?php echo $this->get_field_id( 'shorten_freshness' ); ?>"><?php _e( 'Shorten freshness:',    'bbpress' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'shorten_freshness' ); ?>" name="<?php echo $this->get_field_name( 'shorten_freshness' ); ?>" <?php checked( true, $settings['shorten_freshness'] ); ?> value="1" /></label></p>
 		<p><label for="<?php echo $this->get_field_id( 'show_user' ); ?>"><?php _e( 'Show topic author:', 'bbpress' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'show_user' ); ?>" name="<?php echo $this->get_field_name( 'show_user' ); ?>" <?php checked( true, $settings['show_user'] ); ?> value="1" /></label></p>
+		<p><label for="<?php echo $this->get_field_id( 'hide_avatar' ); ?>"><?php _e( 'Hide Avatar',    'bbpress' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'hide_avatar' ); ?>" name="<?php echo $this->get_field_name( 'hide_avatar' ); ?>" <?php checked( true, $settings['hide_avatar'] ); ?> value="1" /></label></p>
 		<p><label for="<?php echo $this->get_field_id( 'show_forum' ); ?>"><?php _e( 'Show Forum:',    'bbpress' ); ?> <input type="checkbox" id="<?php echo $this->get_field_id( 'show_forum' ); ?>" name="<?php echo $this->get_field_name( 'show_forum' ); ?>" <?php checked( true, $settings['show_forum'] ); ?> value="1" /></label></p>
+		
 		<p>
 			<label for="<?php echo $this->get_field_id( 'order_by' ); ?>"><?php _e( 'Order By:',        'bbpress' ); ?></label>
 			<select name="<?php echo $this->get_field_name( 'order_by' ); ?>" id="<?php echo $this->get_field_name( 'order_by' ); ?>">
