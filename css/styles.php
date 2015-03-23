@@ -17,7 +17,7 @@ if (!empty ($field)) {
 ?>
 #bbpress-forums ul.odd
  {
- background-color: <?php echo $field ;?> ;
+ background-color: <?php echo $field ;?>  !important;
  }
 <?php } ?>
 
