@@ -40,6 +40,7 @@ To install this plugin :
 
 == Changelog ==
 
+2.0 corrected functions.php create new topic
 1.9 update latest activity widget to go to last reply, added hide avatar and shorten freshness
 1.8 added latest activity widget
 1.7 Fix author in footer, fix borders and add hiding, add topic/reply form button styling

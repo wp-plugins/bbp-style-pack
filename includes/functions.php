@@ -54,7 +54,7 @@ function bsp_create_new_topica () {
 	global $bsp_forum_display ;
 	if (!empty ($bsp_forum_display['Create New Topic Description'])) $text=$bsp_forum_display['Create New Topic Description'] ;
 	else $text='Create New Topic' ;
-	if ( bbp_current_user_can_access_create_topic_form() && !bbp_is_forum_category() ) echo '<div style="text-align: center;">  <a href ="#topic">'.$text.'</div>' ;
+	if ( bbp_current_user_can_access_create_topic_form() && !bbp_is_forum_category() ) echo '<div style="text-align: center;">  <a href ="#topic">'.$text.'</a></div>' ;
 	}
 	
 	
