@@ -133,7 +133,7 @@ $field=$dataf['Breadcrumb FontSize'] ;
 if (!empty ($field)) {
 if (is_numeric($field)) $field=$field.'px' ;
 ?>
-#bbpress-forums .bbp-breadcrumb
+#bbpress-forums .bbp-breadcrumb p
  
  {
 font-size:  <?php echo $field ; ?> ;
@@ -144,7 +144,7 @@ font-size:  <?php echo $field ; ?> ;
 $field=$dataf['Breadcrumb FontColor'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums .bbp-breadcrumb
+#bbpress-forums .bbp-breadcrumb p
  
  {
 color:  <?php echo $field ; ?> ;
@@ -155,7 +155,7 @@ color:  <?php echo $field ; ?> ;
 $field=$dataf['Breadcrumb FontFont'] ;
 if (!empty ($field)) {
 ?>
-#bbpress-forums .bbp-breadcrumb
+#bbpress-forums .bbp-breadcrumb p
  
  {
 Font-Family:  <?php echo $field ; ?> ;
@@ -167,7 +167,7 @@ $field=$dataf['Breadcrumb FontStyle'] ;
 if (!empty ($field)) {
 if (strpos($field,'Italic') !== false) {
 ?>
-#bbpress-forums .bbp-breadcrumb
+#bbpress-forums .bbp-breadcrumb p
  
  {
 Font-Style:  italic ; 
@@ -176,14 +176,14 @@ Font-Style:  italic ;
 
 if (strpos($field,'Bold') !== false) {
 ?>
-#bbpress-forums .bbp-breadcrumb
+#bbpress-forums .bbp-breadcrumb p
  
  {
 Font-weight:  bold ; 
  }
  <?php }
  else {?>
- #bbpress-forums .bbp-breadcrumb
+ #bbpress-forums .bbp-breadcrumb p
  
  {
 Font-weight:  normal ; 
