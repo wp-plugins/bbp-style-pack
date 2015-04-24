@@ -42,6 +42,10 @@ $bsp_breadcrumb = get_option( 'bsp_breadcrumb' );
 if(!defined('BSP_PLUGIN_DIR'))
 	define('BSP_PLUGIN_DIR', dirname(__FILE__));
 
+function bbp_style_pack_init() {
+  load_plugin_textdomain('bbp-style-pack', false, basename( dirname( __FILE__ ) ) . '/languages' );
+}
+add_action('plugins_loaded', 'bbp_style_pack_init');
 
 
 
