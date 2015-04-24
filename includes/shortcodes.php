@@ -119,10 +119,12 @@ Function bsp_display_newest_users ($attr) {
 if ( is_numeric( $attr['show'] ))  $number=$attr['show'] ;
 else $number = 5 ;
 	$users = get_users( array( 'orderby' => 'registered', order => 'desc', number => $number )); 
-	echo '<table><th align=left> Newest users </th><th align=left> Date joined </th>' ;
+	$heading1= __('Newest users','bbp-style-pack')  ; 
+	$heading2= __('Date joined','bbp-style-pack')  ; 
+	echo '<table><th align=left>'.$heading1.'</th><th align=left>'.$heading2.'</th>' ;
 	
 	foreach ( $users as $user ) {
-		$date=date("jS M Y", strtotime($user->user_registered )); 
+		$date=date_i18n("jS M Y", strtotime($user->user_registered )); 
 		echo '<tr><td>' . esc_html( $user->display_name ).'</td>' ;
 		echo '<td>'.$date.'</td>' ;
 		echo '</tr>' ;

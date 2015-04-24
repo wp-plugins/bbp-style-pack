@@ -53,7 +53,7 @@ add_filter('private_title_format', 'bsp_remove_private_title');
 function bsp_create_new_topica () {
 	global $bsp_forum_display ;
 	if (!empty ($bsp_forum_display['Create New Topic Description'])) $text=$bsp_forum_display['Create New Topic Description'] ;
-	else $text='Create New Topic' ;
+	else $text=__('Create New Topic', 'bbp-style-pack') ;
 	if ( bbp_current_user_can_access_create_topic_form() && !bbp_is_forum_category() ) echo '<div style="text-align: center;">  <a href ="#topic">'.$text.'</a></div>' ;
 	}
 	
@@ -155,8 +155,8 @@ if (!is_user_logged_in())
 			else {
 			$slug=$user_slug . '/' ;
 			}
-		
-		$profilelink = '<li><a href="/' .$slug.  $user . '/edit">Edit Profile</a></li>';
+		$edit_profile = __('Edit Profile', 'bbp-style-pack') ;
+		$profilelink = '<li><a href="/' .$slug.  $user . '/edit">'.$edit_profile.'</a></li>';
 		$menu = $menu . $profilelink;
 		return $menu;
 	
@@ -175,7 +175,7 @@ if (is_user_logged_in())
 	if (!empty($bsp_login['Register PageMenu Item Description'] )) {
         $desc=$bsp_login['Register PageMenu Item Description'] ;
 		}
-	else $desc='Register' ;
+	else $desc=__('Register', 'bbp-style-pack') ;
 	$registerlink = '<li><a href="'.$url.'">'.$desc.'</a></li>';
 	
 	$menu = $menu . $registerlink;
@@ -227,10 +227,4 @@ global $bsp_login ;
 }
 
 if (!empty ($bsp_login['Login/logoutLogged in text'] )) add_filter( 'gettext', 'bsp_change_text', 20 );
-
-
-
-
-					
-
 

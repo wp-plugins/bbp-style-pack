@@ -18,23 +18,43 @@ function bsp_breadcrumb_settings() {
 						
 <?php echo '<img src="' . plugins_url( 'images/breadcrumb.JPG',dirname(__FILE__)  ) . '"  > '; ?>
 	
-<p>Breadcrumbs are shown to allow users to track back and forth, clicking the links to jump to each area.</p>
+<p>
+<?php _e('Breadcrumbs are shown to allow users to track back and forth, clicking the links to jump to each area.', 'bbp-style-pack'); ?>
+</p>
 <p/>
-<p>If your theme provides breadcrumbs you may want to disable them, or you may simply not wish to show them.</p>
+<p>
+<?php _e('If your theme provides breadcrumbs you may want to disable them, or you may simply not wish to show them.', 'bbp-style-pack'); ?>
+</p>
 <p/>
-<p>If you do show them, you may wish not to show all the links, or to change what the text says.</p>
+<p>
+<?php _e('If you do show them, you may wish not to show all the links, or to change what the text says.', 'bbp-style-pack'); ?>
+</p>
 <p/>
-<p> The home breadcrumb link will take you to your theme's 'front page' as set in wordpress </p>
+<p>
+<?php _e("The home breadcrumb link will take you to your theme's 'front page' as set in wordpress.", 'bbp-style-pack'); ?>
+</p>
 <p/>
-<p> The root breadcrumb will take you to either : </p>
-<p> a) The forum root as set in Dashboard>Settings>forums>Forum Root Slug>Forum Root
-<p> or </p>
-<p> b)to a page with a shortcode if you have set this up.  To do this create a page in wordpress and include the shortcode [bbp-forum-index] (or other bbpress shortcode). </p>
-<p> Then either see what the permalink is for that page or set it to what you want (just under the title when editing), and put that exact end permalink into the forum root in </P>
-<p> Dashboard>Settings>forums>Forum Root Slug>Forum Root
+<p>
+<?php _e('The root breadcrumb will take you to either : ', 'bbp-style-pack'); ?> 
+</p>
+<p>
+<?php _e('a) The forum root as set in Dashboard>Settings>forums>Forum Root Slug>Forum Root', 'bbp-style-pack'); ?> 
+<p>
+<?php _e('or', 'bbp-style-pack'); ?> 
+</p>
+<p>
+<?php _e('b) to a page with a shortcode if you have set this up.  To do this create a page in wordpress and include the shortcode [bbp-forum-index] (or other bbpress shortcode). ', 'bbp-style-pack'); ?> 
+</p>
+<p>
+<?php _e('Then either see what the permalink is for that page or set it to what you want (just under the title when editing), and put that exact end permalink into the forum root in', 'bbp-style-pack'); ?> 
+</P>
+<p>
+<?php _e('Dashboard>Settings>forums>Forum Root Slug>Forum Root', 'bbp-style-pack'); ?> 
+ 
 
+<p>
+<?php _e('The following settings let you control the breadcrumbs.', 'bbp-style-pack'); ?> 
 
-<p>The following settings let you control the breadcrumbs.
 <?php 
 global $bsp_breadcrumb ;
 	?>
@@ -50,12 +70,13 @@ global $bsp_breadcrumb ;
 	
 <!--Don't show breadcrumbs---------------------------------------------------------------------->
 	<tr>
-	<td colspan="2">Disable All forum Breadcrumbs </td>
+	<td colspan="2"><?php _e('Disable All forum Breadcrumbs', 'bbp-style-pack'); ?> </td>
 	<td colspan="2">
 	<?php
 			$item =  'bsp_breadcrumb[no_breadcrumb]' ;
 			$item1 =  $bsp_breadcrumb['no_breadcrumb'] ;
-			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$item1, false ) . ' /> Click to disable breadcrumbs';
+			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$item1, false ) . ' />' ;
+			_e('Click to disable breadcrumbs', 'bbp-style-pack');
   			?>
 	</td></tr>
 	
@@ -69,11 +90,12 @@ global $bsp_breadcrumb ;
 					
 			?>
 			<th><?php echo '1. '.$name ?></th>
-			<td>Disable Home breadcrumb </td>
+			<td><?php _e('Disable Home breadcrumbs', 'bbp-style-pack'); ?> </td>
 			<td><?php
 			$item =  'bsp_breadcrumb[no_home_breadcrumb]' ;
 			$itema =  $bsp_breadcrumb['no_home_breadcrumb'] ;
-			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$itema, false ) . ' /> Click to disable home breadcrumb';
+			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$itema, false ) . ' />' ;
+			_e('Click to disable home breadcrumb', 'bbp-style-pack') ;
   			?>
 			</td>
 			</tr>
@@ -96,11 +118,12 @@ global $bsp_breadcrumb ;
 					
 			?>
 			<th><?php echo '2. '.$name ?></th>
-			<td>Disable Root breadcrumb </td>
+			<td><?php _e('Disable Root breadcrumbs', 'bbp-style-pack'); ?> </td>
 			<td><?php
 			$item =  'bsp_breadcrumb[no_root_breadcrumb]' ;
 			$itema =  $bsp_breadcrumb['no_root_breadcrumb'] ;
-			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$itema, false ) . ' /> Click to disable root breadcrumb';
+			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$itema, false ) . ' />' ;
+			_e('Click to disable root breadcrumb', 'bbp-style-pack') ;
   			?>
 			</td>
 			</tr>
@@ -123,11 +146,12 @@ global $bsp_breadcrumb ;
 					
 			?>
 			<th><?php echo '3. '.$name ?></th>
-			<td>Disable current breadcrumb </td>
+			<td><?php _e('Disable current breadcrumb ', 'bbp-style-pack'); ?></td>
 			<td><?php
 			$item =  'bsp_breadcrumb[no_current_breadcrumb]' ;
 			$itema =  $bsp_breadcrumb['no_current_breadcrumb'] ;
-			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$itema, false ) . ' /> Click to disable current breadcrumb';
+			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$itema, false ) . ' />' ;
+			_e('Click to disable current breadcrumb', 'bbp-style-pack') ;
   			?>
 			</td>
 			</tr>

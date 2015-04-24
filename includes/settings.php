@@ -28,17 +28,20 @@ function bsp_settings_page()
 		<?php // sets up the tabs ?>			
 		<h2 class="nav-tab-wrapper">
 		
-	<a href="?page=bbp-style-pack&tab=forums_index_styling" class="nav-tab <?php echo $active_tab == 'forums_index_styling' ? 'nav-tab-active' : ''; ?>">Forums Index Styling</a>
-	<a href="?page=bbp-style-pack&tab=topic_index_styling" class="nav-tab <?php echo $active_tab == 'topic_index_styling' ? 'nav-tab-active' : ''; ?>">Topics Index Styling</a>	
-	<a href="?page=bbp-style-pack&tab=topic_styling" class="nav-tab <?php echo $active_tab == 'topic_styling' ? 'nav-tab-active' : ''; ?>">Topic/Reply Styling</a>
-	<a href="?page=bbp-style-pack&tab=topic_form" class="nav-tab <?php echo $active_tab == 'topic_form' ? 'nav-tab-active' : ''; ?>">Topic/Reply Form</a>
-	<a href="?page=bbp-style-pack&tab=forum_display" class="nav-tab <?php echo $active_tab == 'forum_display' ? 'nav-tab-active' : ''; ?>">Forum Display</a>
-	<a href="?page=bbp-style-pack&tab=login" class="nav-tab <?php echo $active_tab == 'login' ? 'nav-tab-active' : ''; ?>">Login</a>
-	<a href="?page=bbp-style-pack&tab=breadcrumb" class="nav-tab <?php echo $active_tab == 'breadcrumb' ? 'nav-tab-active' : ''; ?>">Breadcrumbs </a>
-	<a href="?page=bbp-style-pack&tab=shortcodesd" class="nav-tab <?php echo $active_tab == 'shortcodesd' ? 'nav-tab-active' : ''; ?>">Shortcodes </a>
-	<a href="?page=bbp-style-pack&tab=extras" class="nav-tab <?php echo $active_tab == 'extras' ? 'nav-tab-active' : ''; ?>">Extras </a>
-	<a href="?page=bbp-style-pack&tab=widgets" class="nav-tab <?php echo $active_tab == 'widgets' ? 'nav-tab-active' : ''; ?>">Widgets </a>
-	<a href="?page=bbp-style-pack&tab=help" class="nav-tab <?php echo $active_tab == 'help' ? 'nav-tab-active' : ''; ?>">Help </a>
+		
+		
+		
+	<a href="?page=bbp-style-pack&tab=forums_index_styling" class="nav-tab <?php echo $active_tab == 'forums_index_styling' ? 'nav-tab-active' : ''; ?>"><?php _e('Forums Index Styling', 'bbp-style-pack'); ?></a>
+	<a href="?page=bbp-style-pack&tab=topic_index_styling" class="nav-tab <?php echo $active_tab == 'topic_index_styling' ? 'nav-tab-active' : ''; ?>"><?php _e('Topics Index Styling', 'bbp-style-pack'); ?></a>	
+	<a href="?page=bbp-style-pack&tab=topic_styling" class="nav-tab <?php echo $active_tab == 'topic_styling' ? 'nav-tab-active' : ''; ?>"><?php _e('Topic/Reply Styling', 'bbp-style-pack'); ?></a>
+	<a href="?page=bbp-style-pack&tab=topic_form" class="nav-tab <?php echo $active_tab == 'topic_form' ? 'nav-tab-active' : ''; ?>"><?php _e('Topic/Reply Form', 'bbp-style-pack'); ?></a>
+	<a href="?page=bbp-style-pack&tab=forum_display" class="nav-tab <?php echo $active_tab == 'forum_display' ? 'nav-tab-active' : ''; ?>"><?php _e('Forum Display', 'bbp-style-pack'); ?></a>
+	<a href="?page=bbp-style-pack&tab=login" class="nav-tab <?php echo $active_tab == 'login' ? 'nav-tab-active' : ''; ?>"><?php _e('Login', 'bbp-style-pack'); ?></a>
+	<a href="?page=bbp-style-pack&tab=breadcrumb" class="nav-tab <?php echo $active_tab == 'breadcrumb' ? 'nav-tab-active' : ''; ?>"><?php _e('Breadcrumbs', 'bbp-style-pack'); ?> </a>
+	<a href="?page=bbp-style-pack&tab=shortcodesd" class="nav-tab <?php echo $active_tab == 'shortcodesd' ? 'nav-tab-active' : ''; ?>"><?php _e('Shortcodes', 'bbp-style-pack'); ?> </a>
+	<a href="?page=bbp-style-pack&tab=extras" class="nav-tab <?php echo $active_tab == 'extras' ? 'nav-tab-active' : ''; ?>"><?php _e('Extras', 'bbp-style-pack'); ?> </a>
+	<a href="?page=bbp-style-pack&tab=widgets" class="nav-tab <?php echo $active_tab == 'widgets' ? 'nav-tab-active' : ''; ?>"><?php _e('Widgets', 'bbp-style-pack'); ?> </a>
+	<a href="?page=bbp-style-pack&tab=help" class="nav-tab <?php echo $active_tab == 'help' ? 'nav-tab-active' : ''; ?>"><?php _e('Help', 'bbp-style-pack'); ?> </a>
 	
 	
 	</h2>
@@ -53,11 +56,13 @@ function bsp_settings_page()
 </form>
 </td>
 <td>
-<?php _e("If you find this plugin useful, please consider donating just a few dollars to help me develop and maintain it. You support will be appreciated", 'bbp-style-pack'); ?>
+<?php _e('If you find this plugin useful, please consider donating just a few dollars to help me develop and maintain it. You support will be appreciated', 'bbp-style-pack'); ?>
 
 
 </td>
-<td> With thanks to Jacobo Feijóo for extensive testing ! </td>
+<td>
+<?php _e('With thanks to Jacobo Feijóo for extensive testing !', 'bbp-style-pack'); ?>
+  </td>
 </tr>
 </table>
 <?php

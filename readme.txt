@@ -40,6 +40,7 @@ To install this plugin :
 
 == Changelog ==
 
+2.3 internationalisation phase 1
 2.2 corrected styling for .bbp breadcrumb to add p so that fonts take effect
 2.1 corrected forum list where buddypress overwrites #bbpress-forums ul.odd and added !important
 2.0 corrected functions.php create new topic
