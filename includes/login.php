@@ -150,8 +150,8 @@ global $bsp_login ;
 			$name = __('Register Page', 'bbp-style-pack') ;
 			$name1 = __('Register page', 'bbp-style-pack') ;
 			$name2 = __('Menu Item Description', 'bbp-style-pack') ;
-			$area1='RegMenu Item Descriptionister page' ;
-			$area2='' ;
+			$area1='Register page' ;
+			$area2='Menu Item Description' ;
 			$item1="bsp_login[".$name.$area1."]" ;
 			$item2="bsp_login[".$name.$area2."]" ;
 			?>

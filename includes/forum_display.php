@@ -94,7 +94,7 @@ function bsp_forum_display () {
 			$item =  'bsp_forum_display[remove_private]' ;
 			$item1 =  $bsp_forum_display['remove_private'] ;
 			echo '<input name="'.$item.'" id="'.$item.'" type="checkbox" value="1" class="code" ' . checked( 1,$item1, false ) . ' />';
-			_e('Move subscribe to rightRemove private prefix','bbp-style-pack') ;
+			_e('Remove private prefix','bbp-style-pack') ;
   			?>
 			</td>
 			</tr>
