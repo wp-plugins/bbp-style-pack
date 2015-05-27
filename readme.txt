@@ -3,8 +3,8 @@ Contributors: Robin Wilson
 Tags: forum, bbpress, bbp, style
 Requires at least: 3.0.1
 Donate link: http://www.rewweb.co.uk/donate
-Tested up to: 4.1.1
-Stable tag: 2.3
+Tested up to: 4.2.2
+Stable tag: 2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,7 +40,7 @@ To install this plugin :
 
 == Changelog ==
 
-2.4 fix for login registration not working correctly
+2.4 internationalisation phase 2 and fix for login registration not working correctly
 2.3 internationalisation phase 1
 2.2 corrected styling for .bbp breadcrumb to add p so that fonts take effect
 2.1 corrected forum list where buddypress overwrites #bbpress-forums ul.odd and added !important
