@@ -167,7 +167,7 @@ global $bsp_login ;
 			<td> <?php echo $name2 ; ?> </td>
 			<td>
 			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_login[$name.$area2] ).'"<br>' ; ?> 
-			<label class="description"><?php _e( 'Enter the words you want on the menu item eg "Register", "Sign-up", "Join this group" etc.', 'bbp-style-pack' ); ?></label><br/>
+			<label class="description"><?php _e( 'Default "Register" Enter the words you want on the menu item eg "Sign-up", "Join this group" etc.', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 				
@@ -187,6 +187,22 @@ global $bsp_login ;
 			_e ('Click to activate' , 'bbp-style-pack' ) ;
   			?>
 	</td></tr>
+	<!--'edit profile' Description ---------------------------------------------------------------------->
+			<tr>
+			<?php 
+			$name = __('edit profile', 'bbp-style-pack') ;
+			$name2 = __('Menu Item Description', 'bbp-style-pack') ;
+			$area2='Menu Item Description' ;
+			$item2="bsp_login[".$name.$area2."]" ;
+			?>
+			<td></td>
+			<td> <?php echo $name2 ; ?> </td>
+			<td>
+			<?php echo '<input id="'.$item2.'" class="large-text" name="'.$item2.'" type="text" value="'.esc_html( $bsp_login[$name.$area2] ).'"<br>' ; ?> 
+			<label class="description"><?php _e( 'Default "Edit Profile" Enter the words you want on the menu item eg "Edit your Profile", "Change your settings",  etc. ', 'bbp-style-pack' ); ?></label><br/>
+			</td>
+			</tr>
+				
 	
 			
 				</table>

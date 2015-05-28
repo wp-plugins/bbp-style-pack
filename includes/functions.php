@@ -141,12 +141,13 @@ if ($bsp_login['edit_profile'] == true  ) {
 add_filter( 'wp_nav_menu_items', 'bsp_edit_profile' );
 }
 
-function bsp_edit_profile ($menu) { 	
+function bsp_edit_profile ($menu) { 
+global $bsp_login ;		
 if (!is_user_logged_in())
 		return $menu;
 	else
 		$current_user = wp_get_current_user();
-		$user=$current_user->user_login ;
+		$user=$current_user->user_nicename  ;
 		$user_slug =  get_option( '_bbp_user_slug' ) ;
 			if (get_option( '_bbp_include_root' ) == true  ) {	
 			$forum_slug = get_option( '_bbp_root_slug' ) ;
@@ -155,7 +156,10 @@ if (!is_user_logged_in())
 			else {
 			$slug=$user_slug . '/' ;
 			}
-		$edit_profile = __('Edit Profile', 'bbp-style-pack') ;
+			if (!empty($bsp_login['edit profileMenu Item Description'] )) {
+			$edit_profile=$bsp_login['edit profileMenu Item Description'] ;
+			}
+			else $edit_profile = __('Edit Profile', 'bbp-style-pack') ;
 		$profilelink = '<li><a href="/' .$slug.  $user . '/edit">'.$edit_profile.'</a></li>';
 		$menu = $menu . $profilelink;
 		return $menu;
