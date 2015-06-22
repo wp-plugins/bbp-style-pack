@@ -160,7 +160,15 @@ if (!is_user_logged_in())
 			$edit_profile=$bsp_login['edit profileMenu Item Description'] ;
 			}
 			else $edit_profile = __('Edit Profile', 'bbp-style-pack') ;
-		$profilelink = '<li><a href="/' .$slug.  $user . '/edit">'.$edit_profile.'</a></li>';
+			//get url
+			$url = get_site_url(); 
+			$profilelink = '<li><a href="'. $url .'/' .$slug. $user . '/edit">'.$edit_profile.'</a></li>';
+			//$profilelink = '<li><a href="/' .$slug. $user . '/edit">'.$edit_profile.'</a></li>';
+			
+			//$profilelink = '<li><a href="http://allendaniels.com/unison/forums/users/'. $user . '/edit"">'.$edit_profile.'</a></li>';
+			
+
+			
 		$menu = $menu . $profilelink;
 		return $menu;
 	
@@ -186,6 +194,30 @@ if (is_user_logged_in())
 		return $menu;
 	
 }
+
+
+function bsp_login_redirect ()  {
+	global $bsp_login ;	
+	//find out whether we need to do a redirect
+	
+	$login_page = $bsp_login['Login/logoutLogin page'] ;
+	$login_redirect = $bsp_login['Login/logoutLogged in redirect'] ; 
+	$length1 = strlen ( site_url() ) ;
+	$length2 = strlen ( $login_page ) ;
+	$loginslug = substr( $login_page, $length1, $length2 ) ;
+	//if the page that we're on ($_SERVER['REQUEST_URI']) is the one that is used for login ($loginslug) then we know that it is a redirect from out login not a widget redirect, so can do our redirect
+	if ($_SERVER['REQUEST_URI']   ==  $loginslug) $redirect_to = $login_redirect ;
+	return $redirect_to ;
+	}
+
+
+if (!empty ($bsp_login['Login/logoutLogged in redirect'] )) {	
+add_filter ('bbp_user_login_redirect_to' , 'bsp_login_redirect') ;
+}
+
+
+
+
 
 
 /**********breadcrumbs    ********/

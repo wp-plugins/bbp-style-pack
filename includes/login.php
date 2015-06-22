@@ -98,12 +98,15 @@ global $bsp_login ;
 			$name1 = __('Login page', 'bbp-style-pack') ;
 			$name2 = __('Logout page', 'bbp-style-pack') ;
 			$name3 = __('Logged in text', 'bbp-style-pack') ;
+			$name4 = __('Logged in redirect' , 'bbp-style-pack') ;
 			$area1='Login page' ;
 			$area2='Logout page' ;
 			$area3='Logged in text' ;
+			$area4='Logged in redirect' ;
 			$item1="bsp_login[".$name.$area1."]" ;
 			$item2="bsp_login[".$name.$area2."]" ;
 			$item3="bsp_login[".$name.$area3."]" ;
+			$item4="bsp_login[".$name.$area4."]" ;
 			?>
 			<th><?php echo '3.'. $name ?></th>
 			<td> <?php echo $name1 ; ?> </td>
@@ -126,6 +129,15 @@ global $bsp_login ;
 			<td>
 			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item3.'" type="text" value="'.esc_html( $bsp_login[$name.$area3] ).'"<br>' ; ?> 
 			<label class="description"><?php _e( 'If you are using [bbp-login], then users will get "you are already logged in" once they log in.  Maybe change this to something nicer such as "You are currently logged in" ', 'bbp-style-pack' ); ?></label><br/>
+			</td>
+			</tr>
+			<tr> <td></td> <td>OR </td></tr>
+			<tr>
+			<td></td>
+			<td> <?php echo $name4 ; ?> </td>
+			<td>
+			<?php echo '<input id="'.$item3.'" class="large-text" name="'.$item4.'" type="text" value="'.esc_html( $bsp_login[$name.$area4] ).'"<br>' ; ?> 
+			<label class="description"><?php _e( 'If you are using [bbp-login], then if you enter a full url of the page with this shortcode here, users will be redirected to that page instead of getting the "you are already logged in" above', 'bbp-style-pack' ); ?></label><br/>
 			</td>
 			</tr>
 			

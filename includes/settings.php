@@ -41,6 +41,7 @@ function bsp_settings_page()
 	<a href="?page=bbp-style-pack&tab=shortcodesd" class="nav-tab <?php echo $active_tab == 'shortcodesd' ? 'nav-tab-active' : ''; ?>"><?php _e('Shortcodes', 'bbp-style-pack'); ?> </a>
 	<a href="?page=bbp-style-pack&tab=extras" class="nav-tab <?php echo $active_tab == 'extras' ? 'nav-tab-active' : ''; ?>"><?php _e('Extras', 'bbp-style-pack'); ?> </a>
 	<a href="?page=bbp-style-pack&tab=widgets" class="nav-tab <?php echo $active_tab == 'widgets' ? 'nav-tab-active' : ''; ?>"><?php _e('Widgets', 'bbp-style-pack'); ?> </a>
+	<a href="?page=bbp-style-pack&tab=la_widget" class="nav-tab <?php echo $active_tab == 'la_widget' ? 'nav-tab-active' : ''; ?>"><?php _e('Latest Activity Widget styling', 'bbp-style-pack'); ?></a>
 	<a href="?page=bbp-style-pack&tab=help" class="nav-tab <?php echo $active_tab == 'help' ? 'nav-tab-active' : ''; ?>"><?php _e('Help', 'bbp-style-pack'); ?> </a>
 	
 	
@@ -120,6 +121,12 @@ if ($active_tab == 'help' ) {
 bsp_help();
 }
 
+//****  help page
+if ($active_tab == 'la_widget' ) {
+bsp_style_settings_la();
+}
+
+
 //end of function bsp_settings_page()
 }
 
@@ -130,6 +137,7 @@ function bsp_register_settings() {
 	register_setting( 'bsp_style_settings_ti', 'bsp_style_settings_ti' );
 	register_setting( 'bsp_style_settings_t', 'bsp_style_settings_t' );
 	register_setting( 'bsp_style_settings_form', 'bsp_style_settings_form' );
+	register_setting( 'bsp_style_settings_la', 'bsp_style_settings_la' );
 	register_setting( 'bsp_forum_display', 'bsp_forum_display' );
 	register_setting( 'bsp_login', 'bsp_login' );
 	register_setting( 'bsp_breadcrumb', 'bsp_breadcrumb' );

@@ -119,13 +119,13 @@ class bsp_Activity_Widget extends WP_Widget {
 		echo $args['before_widget'];
 
 		if ( !empty( $settings['title'] ) ) {
-			echo $args['before_title'] . $settings['title'] . $args['after_title'];
+			echo '<span class="bsp-la-title">' . $args['before_title'] .  $settings['title'] . $args['after_title'] . '</span>' ;
 		} ?>
 
 		<ul>
 
 			<?php while ( $widget_query->have_posts() ) :
-			
+				
 
 				$widget_query->the_post();
 				$topic_id    = bbp_get_topic_id( $widget_query->post->ID );
@@ -149,19 +149,26 @@ class bsp_Activity_Widget extends WP_Widget {
 				<?php 
 				//if no replies set the link to the topic
 				if (empty ($reply)) {?>
-					<a class="bbp-forum-title" href="<?php bbp_topic_permalink( $topic_id ); ?>"><?php bbp_topic_title( $topic_id ); ?></a>
+					<a class="bsp-la-reply-topic-title" href="<?php bbp_topic_permalink( $topic_id ); ?>"><?php bbp_topic_title( $topic_id ); ?></a>
 				<?php } 
 				//if replies then set link to the latest reply
 				else { 
-					echo '<a class="bbp-reply-topic-title" href="' . esc_url( bbp_get_reply_url( $reply ) ) . '" title="' . esc_attr( bbp_get_reply_excerpt( $reply, 50 ) ) . '">' . bbp_get_reply_topic_title( $reply ) . '</a>';
+					echo '<a class="bsp-la-reply-topic-title " href="' . esc_url( bbp_get_reply_url( $reply ) ) . '" title="' . esc_attr( bbp_get_reply_excerpt( $reply, 50 ) ) . '">' . bbp_get_reply_topic_title( $reply ) . '</a>';
 				} ?>
 				
 					<?php if ( ! empty( $author_link ) ) : ?>
 						<div>
 						<?php 
 						
-						if (empty($reply)) printf( _x( 'topic by %1$s', 'widgets', 'bbp-style-pack' ), '<span class="topic-author">' . $author_link . '</span>' ); 
-						else printf( _x( 'reply by %1$s', 'widgets', 'bbp-style-pack' ), '<span class="topic-author">' . $author_link . '</span>' ); ?>
+							if (empty($reply)) {
+							echo '<span class="bsp-la-text">' ;
+							printf( _x( 'topic by %1$s', 'widgets', 'bbp-style-pack' ), '</span> <span class="bsp-la-topic-author topic-author">' . $author_link . '</span>' ); 
+							}
+							else {
+							echo '<span class="bsp-la-text">' ;
+							printf( _x( 'reply by %1$s', 'widgets', 'bbp-style-pack' ), '</span> <span class=" bsp-la-topic-author topic-author">' . $author_link . '</span>' ); 
+							}
+							?>
 						</div>
 					<?php endif; ?>
 					
@@ -171,7 +178,7 @@ class bsp_Activity_Widget extends WP_Widget {
 						//shorten freshness?
 						if ( ! empty( $settings['shorten_freshness'] ) ) $output = preg_replace( '/, .*[^ago]/', ' ', $output ); ?>
 						<div><?php 
-						echo $output ;
+						echo '<span class="bsp-la-freshness">'.$output. '</span>'  ;
 						//bbp_topic_last_active_time( $topic_id ); ?></div>
 					
 					<?php endif; ?>
@@ -182,8 +189,10 @@ class bsp_Activity_Widget extends WP_Widget {
 						$forum = bbp_get_topic_forum_id($topic_id);
 						$forum1 = bbp_get_forum_title($forum) ;
 						$forum2 = esc_url( bbp_get_forum_permalink( $forum )) ;
-						echo 'in ' ; ?>
-						<a class="bbp-forum-title" href="<?php echo $forum2; ?>"><?php echo $forum1 ; ?></a>
+						echo '<span class="bsp-la-text">' ;
+						_e ( 'in ', 'bbp-style-pack' ) ;
+						echo '</span>' ; ?>
+						<a class="bsp-la-forum-title bbp-forum-title" href="<?php echo $forum2; ?>"><?php echo $forum1 ; ?></a>
 					</div>
 					<?php endif; ?>
 				

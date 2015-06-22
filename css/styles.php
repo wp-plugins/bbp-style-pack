@@ -3,6 +3,7 @@
 $dataf= get_option('bsp_style_settings_f') ;
 $datati= get_option('bsp_style_settings_ti') ;
 $datat= get_option('bsp_style_settings_t') ;
+$datala= get_option('bsp_style_settings_la') ;
 $dataform= get_option('bsp_style_settings_form') ;
 $datafd=get_option('bsp_forum_display') ;
 
@@ -2057,6 +2058,447 @@ if (!empty ($field)) {
 }
 
  <?php } ?>
+ 
+ /*********_________________LATEST ACTIVITY WIDGET___________________________________________*/ 
+ 
+  /*  2 ----------------------  Widget title --------------------------*/
+ 
+<?php 
+
+
+$field=$datala['Widget TitleSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+.bsp-la-title h3
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ 
+<?php 
+$field=$datala['Widget TitleColor'] ;
+if (!empty ($field)) {
+?>
+.bsp-la-title h3
+
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ <?php 
+$field=$datala['Widget TitleFont'] ;
+if (!empty ($field)) {
+?>
+
+.bsp-la-title h3
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datala['Widget TitleStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+
+.bsp-la-title h3
+
+{
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+.bsp-la-reply-topic-title
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+else {?>
+
+.bsp-la-reply-topic-title
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+ 
+ 
+ 
+ /*  2 ----------------------  topic/reply title --------------------------*/
+ 
+<?php 
+
+
+$field=$datala['Topic TitleSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+.bsp-la-reply-topic-title
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ 
+
+ 
+ <?php 
+$field=$datala['Topic TitleFont'] ;
+if (!empty ($field)) {
+?>
+
+.bsp-la-reply-topic-title
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datala['Topic TitleStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+
+.bsp-la-reply-topic-title
+
+{
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+.bsp-la-reply-topic-title
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+else {?>
+
+.bsp-la-reply-topic-title
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+ 
+   /*  3 ----------------------  Text font --------------------------*/
+ 
+<?php 
+$field=$datala['Text fontSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+.bsp-la-text
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ <?php 
+$field=$datala['Text fontColor'] ;
+if (!empty ($field)) {
+?>
+.bsp-la-text
+
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+ 
+ <?php 
+$field=$datala['Text fontFont'] ;
+if (!empty ($field)) {
+?>
+.bsp-la-text
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datala['Text fontStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+.bsp-la-text
+ {
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+.bsp-la-text
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+else {?>
+.bsp-la-text
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+  /*  4 ----------------------  Topic author Font --------------------------*/
+ 
+<?php 
+
+
+$field=$datala['Topic author FontSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+.bsp-la-topic-author
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+ 
+ <?php 
+$field=$datala['Topic author FontFont'] ;
+if (!empty ($field)) {
+?>
+
+.bsp-la-topic-author
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datala['Topic author FontStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+
+.bsp-la-topic-author
+
+{
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+.bsp-la-topic-author
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+else {?>
+
+.bsp-la-reply-topic-title
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+ 
+  /*  5 ----------------------  Freshness Font--------------------------*/
+ 
+<?php 
+$field=$datala['Freshness FontSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+.bsp-la-freshness
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ <?php 
+$field=$datala['Freshness FontColor'] ;
+if (!empty ($field)) {
+?>
+.bsp-la-freshness
+
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+
+ 
+ <?php 
+$field=$datala['Freshness FontFont'] ;
+if (!empty ($field)) {
+?>
+.bsp-la-freshness
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datala['Freshness FontStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+.bsp-la-freshness
+ {
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+.bsp-la-text
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+else {?>
+.bsp-la-text
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+ /*  6 ----------------------  Forum Font --------------------------*/
+ 
+<?php 
+
+
+$field=$datala['Forum FontSize'] ;
+if (!empty ($field)) {
+if (is_numeric($field)) $field=$field.'px' ;
+?>
+.bsp-la-forum-title
+ 
+ {
+font-size:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+  
+ <?php 
+$field=$datala['Forum FontFont'] ;
+if (!empty ($field)) {
+?>
+
+.bsp-la-forum-title
+ 
+ {
+Font-Family:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datala['Forum FontStyle'] ;
+if (!empty ($field)) {
+if (strpos($field,'Italic') !== false) {
+?>
+
+.bsp-la-forum-title
+
+{
+Font-Style:  italic ; 
+ }
+ <?php } 
+
+if (strpos($field,'Bold') !== false) {
+?>
+.bsp-la-forum-title
+ 
+ {
+Font-weight:  bold ; 
+ }
+ <?php }
+else {?>
+
+.bsp-la-forum-title
+ {
+Font-weight:  normal ; 
+ }
+ <?php
+ }
+ }
+ ?>
+ 
+ 
+  /*  5 ----------------------  Topic-reply links --------------------------*/
+ 
+<?php 
+$field=$datala['Topic-reply linksLink Color'] ;
+if (!empty ($field)) {
+?>
+a:link.bsp-la-reply-topic-title
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+<?php 
+$field=$datala['Topic-reply linksVisited Color'] ;
+if (!empty ($field)) {
+?>
+a:visited.bsp-la-reply-topic-title 
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ 
+ <?php 
+$field=$datala['Topic-reply linksHover Color'] ;
+if (!empty ($field)) {
+?>
+a:hover.bsp-la-reply-topic-title 
+ 
+ {
+color:  <?php echo $field ; ?> ;
+ }
+ <?php } ?>
+ 
+ 
  
  
  

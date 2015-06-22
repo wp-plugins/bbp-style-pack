@@ -83,7 +83,7 @@ function bsp_style_settings_f () {
 	<!--Font - Forum headings  ------------------------------------------------------------------->
 			<tr>
 			<?php 
-			$name = __('Forum Headings Font') ;
+			$name = ('Forum Headings Font') ;
 			$name0 = __('Forum Headings Font', 'bbp-style-pack') ;
 			$name1 = __('Size', 'bbp-style-pack') ;
 			$name2 = __('Color', 'bbp-style-pack') ;

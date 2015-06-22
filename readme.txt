@@ -40,7 +40,7 @@ To install this plugin :
 
 == Changelog ==
 
-
+2.6 added login redirect and la activity widget styling
 2.5 Fix for edit profile and add ability to change description
 2.4 internationalisation phase 2 and fix for login registration not working correctly
 2.3 internationalisation phase 1
