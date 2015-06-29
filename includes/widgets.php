@@ -307,6 +307,10 @@ class bsp_Activity_Widget extends WP_Widget {
 }
 
 
-add_action( 'widgets_init', function(){
-     register_widget( 'bsp_Activity_Widget' );
-});
+function register_la_widget() {
+    register_widget("bsp_Activity_Widget");
+
+}
+
+
+add_action('widgets_init', 'register_la_widget');
